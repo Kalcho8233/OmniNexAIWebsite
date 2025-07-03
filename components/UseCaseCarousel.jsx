@@ -20,8 +20,8 @@ export default function UseCaseCarousel() {
   }, []);
 
   return (
-    <section className="py-20 px-6 md:px-12 text-center">
-      <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
+    <section className="py-24 px-6 md:px-12 text-center relative bg-[#0a0a0a]">
+      <h2 className="text-3xl md:text-5xl font-bold text-white mb-12">
         Explore Use Cases
       </h2>
 
@@ -29,11 +29,11 @@ export default function UseCaseCarousel() {
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.6 }}
-            className="text-neonBlue text-2xl md:text-4xl font-semibold absolute"
+            exit={{ opacity: 0, y: -25 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            className="text-neonBlue text-2xl md:text-4xl font-bold tracking-wide shadow-[0_0_12px_#00ffff80] drop-shadow-md"
           >
             {useCases[index]}
           </motion.div>
