@@ -15,6 +15,23 @@ export default function DemoForm() {
       ...form,
       interest: form.interest === 'Other' ? form.otherInterest : form.interest,
     };
+
+    // Send to n8n webhook
+    fetch('https://omninex.app.n8n.cloud/webhook-test/7caa4674-f605-4bed-ad59-02ad3de37982', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(submittedData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Webhook response:', data);
+      })
+      .catch(error => {
+        console.error('Error sending to webhook:', error);
+      });
+
     console.log('Demo form submitted:', submittedData);
     alert('✅ Your demo request has been received!');
   };
