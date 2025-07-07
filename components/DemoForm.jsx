@@ -3,37 +3,40 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function DemoForm() {
-  const [form, setForm] = useState({ name: '', email: '', company: '', interest: '', otherInterest: '' });
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    company: '',
+    interest: '',
+    otherInterest: ''
+  });
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const submittedData = {
       ...form,
       interest: form.interest === 'Other' ? form.otherInterest : form.interest,
     };
 
-    // Send to n8n webhook
-    fetch('https://omninex.app.n8n.cloud/webhook-test/7caa4674-f605-4bed-ad59-02ad3de37982', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(submittedData)
-    })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Webhook response:', data);
-      })
-      .catch(error => {
-        console.error('Error sending to webhook:', error);
+    try {
+      const res = await fetch('https://omninex.app.n8n.cloud/webhook-test/demo-request', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(submittedData),
       });
 
-    console.log('Demo form submitted:', submittedData);
-    alert('✅ Your demo request has been received!');
+      if (!res.ok) throw new Error(`Webhook error: ${res.status}`);
+
+      alert('✅ Your demo request has been received!');
+      console.log('✅ Submitted to n8n:', submittedData);
+    } catch (err) {
+      console.error('❌ Failed to submit to n8n:', err);
+      alert('Something went wrong. Please try again later.');
+    }
   };
 
   return (
