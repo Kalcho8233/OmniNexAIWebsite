@@ -30,7 +30,7 @@ export default function DemoForm() {
     };
 
     try {
-      const res = await fetch('https://omninex.app.n8n.cloud/webhook-test/demo-request', {
+      const res = await fetch('https://omninex.app.n8n.cloud/webhook/demo-request', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(submittedData),
