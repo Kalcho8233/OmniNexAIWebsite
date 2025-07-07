@@ -1,4 +1,3 @@
-// components/StatsSection.jsx
 import { motion } from 'framer-motion';
 
 const stats = [
@@ -9,14 +8,9 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="relative py-20 px-6 md:px-12 text-center bg-[#0a0a0a] overflow-hidden">
-      {/* Optional animated background layer */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.04]">
-        <div className="w-full h-full bg-[url('/grid.svg')] bg-repeat opacity-10" />
-      </div>
-
+    <section className="py-20 px-6 md:px-12 text-center bg-white rounded-2xl">
       <motion.h2
-        className="text-3xl md:text-5xl font-bold text-white mb-16 relative z-10"
+        className="text-3xl md:text-5xl font-bold text-black mb-12"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -25,20 +19,20 @@ export default function StatsSection() {
         Real Results
       </motion.h2>
 
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
         {stats.map((stat, i) => (
           <motion.div
             key={i}
-            className="bg-[#121212] rounded-2xl p-8 border border-neonBlue shadow-[0_0_15px_#00ffff40] transition-all hover:scale-[1.03]"
+            className="bg-white rounded-xl p-8 border border-neonBlue text-black"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: i * 0.15, duration: 0.6 }}
+            transition={{ delay: i * 0.2, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="text-neonPurple text-5xl font-extrabold mb-3 tracking-wide">
+            <div className="text-neonPurple text-4xl md:text-5xl font-bold mb-2">
               {stat.value}
             </div>
-            <div className="text-gray-300 text-lg md:text-xl">
+            <div className="text-gray-800 text-lg md:text-xl">
               {stat.label}
             </div>
           </motion.div>
