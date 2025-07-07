@@ -26,10 +26,12 @@ export default function DemoForm() {
       name: form.name,
       email: form.email,
       company: form.company,
-      interest: finalInterest,
+      interest: finalInterest || 'Not specified',
     };
 
     try {
+      console.log('👉 Sending data to webhook:', submittedData);
+
       const res = await fetch('https://omninex.app.n8n.cloud/webhook/demo-request', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
