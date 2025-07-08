@@ -1,9 +1,9 @@
 // tailwind.config.js
-
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}"
+    "./app/**/*.{js,ts,jsx,tsx}",          // ако използваш Next.js App Router
+    "./pages/**/*.{js,ts,jsx,tsx}",        // за Pages Router
+    "./components/**/*.{js,ts,jsx,tsx}"    // компоненти
   ],
   theme: {
     extend: {
@@ -14,12 +14,12 @@ module.exports = {
 
         // Основни
         backgroundDark: "#0a0a0a",
-        backgroundLight: "#F8FAFC",    // нов светъл фон за секции/cards
-        accentText: "#111827",         // почти черен за основен текст
-        lightGray: "#E5E7EB",          // светло сиво за бордери/cards
-        secondaryText: "#64748B",      // за footer и др.
+        backgroundLight: "#F8FAFC",
+        accentText: "#111827",
+        lightGray: "#E5E7EB",
+        secondaryText: "#64748B",
 
-        // Допълнителни ако искаш
+        // Допълнителни
         white: "#ffffff"
       },
       fontFamily: {
