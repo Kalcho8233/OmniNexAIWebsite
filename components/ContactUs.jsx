@@ -35,7 +35,7 @@ export default function ContactUs() {
               className="w-12 h-12 hover:scale-110 transition-transform drop-shadow-md"
             />
           </a>
-          <a href="mailto:omninex@vinbrothers.com">
+          <a href="mailto:info@omninexai.com">
             <img
               src="/email-icon.png"
               alt="Email"
