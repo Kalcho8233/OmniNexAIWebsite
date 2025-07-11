@@ -15,20 +15,18 @@ const handleSubmit = async (e) => {
   try {
     console.log('👉 Sending data to webhook:', submittedData);
 
-    const res = await fetch('https://omninex.app.n8n.cloud/webhook-test/omninexai', {
+    const res = await fetch('https://omninex.app.n8n.cloud/webhook/omninexai', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(submittedData),
     });
 
-    const responseText = await res.text();
-    console.log('🔎 Webhook response:', res.status, responseText);
-
-    if (!res.ok) throw new Error(`Webhook error: ${res.status} - ${responseText}`);
+    if (!res.ok) throw new Error(`Webhook error: ${res.status}`);
 
     alert('✅ Your demo request has been received!');
     console.log('✅ Submitted to n8n:', submittedData);
 
+    // Clear form
     setForm({ name: '', email: '', company: '', interest: '', otherInterest: '' });
 
   } catch (err) {
