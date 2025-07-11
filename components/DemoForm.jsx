@@ -15,7 +15,7 @@ const handleSubmit = async (e) => {
   try {
     console.log('👉 Sending data to webhook:', submittedData);
 
-    const res = await fetch('https://omninex.app.n8n.cloud/webhook/omninexai', {
+    const res = await fetch('https://omninex.app.n8n.cloud/webhook-test/omninexai', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(submittedData),
