@@ -24,7 +24,7 @@ export default function DemoForm() {
     };
 
     try {
-      await fetch('https://omninex.app.n8n.cloud/webhook-test/omninexai', {
+      await fetch('https://omninex.app.n8n.cloud/webhook/omninexai', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(submittedData),
