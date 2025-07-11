@@ -26,19 +26,17 @@ export default function DemoForm() {
       name: form.name,
       email: form.email,
       company: form.company,
-      interest: finalInterest || 'Not specified',
+      interest: finalInterest,
     };
 
     try {
-      console.log('👉 Sending data to webhook:', submittedData);
-
-      const res = await fetch(https://omninex.app.n8n.cloud/webhook-test/3b65c89f-d4c7-499f-b9ea-804af9f9dfc5, {
+      const res = await fetch('https://omninex.app.n8n.cloud/webhook-test/demo-request', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(submittedData),
       });
 
-      if (!res.ok) throw new Error(Webhook error: ${res.status});
+      if (!res.ok) throw new Error(`Webhook error: ${res.status}`);
 
       alert('✅ Your demo request has been received!');
       console.log('✅ Submitted to n8n:', submittedData);
