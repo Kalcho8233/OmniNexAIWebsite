@@ -25,6 +25,7 @@ const handleSubmit = async (e) => {
     console.log('✅ Submitted to n8n:', submittedData);
 
     setForm({ name: '', email: '', company: '', interest: '', otherInterest: '' });
+
   } catch (err) {
     console.error('❌ Failed to submit to n8n:', err);
     alert('Something went wrong. Please try again later.');
