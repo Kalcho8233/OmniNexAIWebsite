@@ -21,7 +21,10 @@ const handleSubmit = async (e) => {
       body: JSON.stringify(submittedData),
     });
 
-    if (!res.ok) throw new Error(`Webhook error: ${res.status}`);
+    const responseText = await res.text();
+    console.log('🔎 Webhook response:', res.status, responseText);
+
+    if (!res.ok) throw new Error(`Webhook error: ${res.status} - ${responseText}`);
 
     alert('✅ Your demo request has been received!');
     console.log('✅ Submitted to n8n:', submittedData);
