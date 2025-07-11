@@ -1,5 +1,6 @@
 const handleSubmit = async (e) => {
   e.preventDefault();
+
   const finalInterest =
     form.interest === 'Other' && form.otherInterest.trim() !== ''
       ? form.otherInterest
@@ -24,6 +25,7 @@ const handleSubmit = async (e) => {
     alert('✅ Your demo request has been received!');
     console.log('✅ Submitted to n8n:', submittedData);
 
+    // Clear form
     setForm({ name: '', email: '', company: '', interest: '', otherInterest: '' });
 
   } catch (err) {
