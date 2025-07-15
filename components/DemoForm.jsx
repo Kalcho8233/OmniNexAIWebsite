@@ -25,11 +25,10 @@ export default function DemoForm() {
 
     try {
       await fetch('https://kolio.app.n8n.cloud/webhook/omninexai', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(submittedData),
-});
-
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(submittedData),
+      });
 
       alert('✅ Your demo request has been received!');
     } catch (error) {
