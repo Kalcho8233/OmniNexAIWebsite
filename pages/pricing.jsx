@@ -26,7 +26,8 @@ const plans = [
         desc: "We walk you through everything — no tech skills needed. You’ll know exactly how to use your assistant from Day 1."
       }
     ],
-    note: "Best for: lean teams getting started"
+    note: "Best for: lean teams getting started",
+    stripeButtonId: "buy_btn_1RnMqjQ3alExjY2yBSlLMmH3"
   },
   {
     name: "Optimize",
@@ -51,7 +52,8 @@ const plans = [
         desc: "You get help fast — no waiting in line, no bots. Real answers, real people, real quick."
       }
     ],
-    note: "For teams ready to systemize & scale"
+    note: "For teams ready to systemize & scale",
+    stripeButtonId: "buy_btn_1RnMxZQ3alExjY2yeUmTAidG"
   },
   {
     name: "Scale",
@@ -80,7 +82,8 @@ const plans = [
         desc: "One expert from our team stays with you. They know your setup and help you get the most out of your assistant — anytime you need it."
       }
     ],
-    note: "For growing agencies & enterprises"
+    note: "For growing agencies & enterprises",
+    stripeButtonId: "buy_btn_1RnMytQ3alExjY2ymqk2cAnN"
   }
 ];
 
@@ -90,6 +93,7 @@ export default function Pricing() {
       <Head>
         <title>Pricing | OmniNex AI Plans</title>
         <meta name="description" content="Compare OmniNex pricing plans for custom AI assistants. From lean startup teams to full-scale agency automation – see which plan fits your business." />
+        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
       </Head>
 
       <Navbar />
@@ -118,13 +122,17 @@ export default function Pricing() {
               )}
               <h2 className="text-2xl font-semibold mb-2 text-primaryText">{plan.name}</h2>
               <p className={`font-semibold ${plan.text}`}>{plan.price}</p>
-              <PlanROIText plan={plan.name} /> {/* ✅ ROI текст */}
+              <PlanROIText plan={plan.name} />
               <div className="space-y-4 mb-6 mt-4">
                 {plan.features.map((f, j) => (
                   <FeatureAccordionLite key={j} title={f.title} description={f.desc} />
                 ))}
               </div>
-              <p className="text-sm text-secondaryText italic">{plan.note}</p>
+              <p className="text-sm text-secondaryText italic mb-4">{plan.note}</p>
+              <stripe-buy-button
+                buy-button-id={plan.stripeButtonId}
+                publishable-key="pk_test_51RmCp0Q3alExjY2yRHGEEF9MqAW4jaeWyRSq3MHmqNSrIAr1UJdHlo49JrHq4BaEtQId4fHWL2JvjA96FHtSNEUW00iBRfTM39"
+              ></stripe-buy-button>
             </div>
           ))}
         </section>
