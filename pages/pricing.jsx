@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import NeonButton from "../components/NeonButton";
 import FeatureAccordionLite from "../components/FeatureAccordionLite";
 import PlanROIText from "../components/PlanROIText"; // ✅ Нов компонент
+import StripeBuyButton from "../components/StripeBuyButton"; // ✅ Stripe бутони компонент
 
 const plans = [
   {
@@ -129,10 +130,7 @@ export default function Pricing() {
                 ))}
               </div>
               <p className="text-sm text-secondaryText italic mb-4">{plan.note}</p>
-              <stripe-buy-button
-                buy-button-id={plan.stripeButtonId}
-                publishable-key="pk_test_51RmCp0Q3alExjY2yRHGEEF9MqAW4jaeWyRSq3MHmqNSrIAr1UJdHlo49JrHq4BaEtQId4fHWL2JvjA96FHtSNEUW00iBRfTM39"
-              ></stripe-buy-button>
+              <StripeBuyButton buyButtonId={plan.stripeButtonId} />
             </div>
           ))}
         </section>
