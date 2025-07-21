@@ -51,10 +51,6 @@ const plans = [
       {
         title: " Priority support",
         desc: "You get help fast — no waiting in line, no bots. Real answers, real people, real quick."
-      },
-      {
-        title: " Custom integrations",
-        desc: "Already using Slack, Gmail, Notion or HubSpot? We’ll connect your assistant to your tools so it fits right into your workflow."
       }
     ],
     note: "For teams ready to systemize & scale",
@@ -118,28 +114,23 @@ export default function Pricing() {
           {plans.map((plan, i) => (
             <div
               key={i}
-              className={`relative bg-white ${plan.border} p-6 rounded-xl shadow-sm hover:scale-[1.03] transition-transform border-2 flex flex-col justify-between`}
-              style={{ minHeight: '620px' }}
+              className={`relative bg-white ${plan.border} p-6 rounded-xl shadow-sm hover:scale-[1.03] transition-transform border-2`}
             >
               {plan.name === "Optimize" && (
                 <div className="absolute top-4 right-4 bg-[#D000FF] text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                   💜 Most Chosen
                 </div>
               )}
-              <div>
-                <h2 className="text-2xl font-semibold mb-2 text-primaryText">{plan.name}</h2>
-                <p className={`font-semibold ${plan.text}`}>{plan.price}</p>
-                <PlanROIText plan={plan.name} />
-                <div className="space-y-4 mb-6 mt-4">
-                  {plan.features.map((f, j) => (
-                    <FeatureAccordionLite key={j} title={f.title} description={f.desc} />
-                  ))}
-                </div>
-                <p className="text-sm text-secondaryText italic mb-4">{plan.note}</p>
+              <h2 className="text-2xl font-semibold mb-2 text-primaryText">{plan.name}</h2>
+              <p className={`font-semibold ${plan.text}`}>{plan.price}</p>
+              <PlanROIText plan={plan.name} />
+              <div className="space-y-4 mb-6 mt-4">
+                {plan.features.map((f, j) => (
+                  <FeatureAccordionLite key={j} title={f.title} description={f.desc} />
+                ))}
               </div>
-              <div className="mt-auto pt-4">
-                <StripeBuyButton buyButtonId={plan.stripeButtonId} />
-              </div>
+              <p className="text-sm text-secondaryText italic mb-4">{plan.note}</p>
+              <StripeBuyButton buyButtonId={plan.stripeButtonId} />
             </div>
           ))}
         </section>
