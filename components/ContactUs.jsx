@@ -14,7 +14,7 @@ export default function ContactUs() {
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Contact Us</h2>
         <div className="flex justify-center gap-12 mb-8">
           <a
-            href="https://calendly.com/nikola-nikolov1/30min"
+            href="https://calendly.com/nikola-nikolov1/ai-assistant-discovery-call"
             target="_blank"
             rel="noopener noreferrer"
           >
