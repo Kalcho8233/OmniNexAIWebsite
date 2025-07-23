@@ -4,8 +4,8 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import NeonButton from "../components/NeonButton";
 import FeatureAccordionLite from "../components/FeatureAccordionLite";
-import PlanROIText from "../components/PlanROIText"; // ✅ Нов компонент
-import StripeBuyButton from "../components/StripeBuyButton"; // ✅ Stripe бутони компонент
+import PlanROIText from "../components/PlanROIText";
+import StripeBuyButton from "../components/StripeBuyButton";
 
 const plans = [
   {
@@ -114,23 +114,27 @@ export default function Pricing() {
           {plans.map((plan, i) => (
             <div
               key={i}
-              className={`relative bg-white ${plan.border} p-6 rounded-xl shadow-sm hover:scale-[1.03] transition-transform border-2`}
+              className={`relative bg-white ${plan.border} p-6 rounded-xl shadow-sm hover:scale-[1.03] transition-transform border-2 flex flex-col justify-between`}
             >
               {plan.name === "Optimize" && (
                 <div className="absolute top-4 right-4 bg-[#D000FF] text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                   💜 Most Chosen
                 </div>
               )}
-              <h2 className="text-2xl font-semibold mb-2 text-primaryText">{plan.name}</h2>
-              <p className={`font-semibold ${plan.text}`}>{plan.price}</p>
-              <PlanROIText plan={plan.name} />
-              <div className="space-y-4 mb-6 mt-4">
-                {plan.features.map((f, j) => (
-                  <FeatureAccordionLite key={j} title={f.title} description={f.desc} />
-                ))}
+              <div>
+                <h2 className="text-2xl font-semibold mb-2 text-primaryText">{plan.name}</h2>
+                <p className={`font-semibold ${plan.text}`}>{plan.price}</p>
+                <PlanROIText plan={plan.name} />
+                <div className="space-y-4 mb-6 mt-4">
+                  {plan.features.map((f, j) => (
+                    <FeatureAccordionLite key={j} title={f.title} description={f.desc} />
+                  ))}
+                </div>
+                <p className="text-sm text-secondaryText italic mb-4">{plan.note}</p>
               </div>
-              <p className="text-sm text-secondaryText italic mb-4">{plan.note}</p>
-              <StripeBuyButton buyButtonId={plan.stripeButtonId} />
+              <div className="mt-auto">
+                <StripeBuyButton buyButtonId={plan.stripeButtonId} />
+              </div>
             </div>
           ))}
         </section>
