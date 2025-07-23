@@ -66,7 +66,7 @@ export default function OurPlans() {
               ))}
             </ul>
             <p className="text-sm text-gray-500 italic mb-4">{plan.highlight}</p>
-            <NeonButton text="Book a Demo" href="https://calendly.com/nikivldmrv/30min" />
+            <NeonButton text="Book a Demo" href="https://calendly.com/nikola-nikolov1/ai-assistant-discovery-call" />
           </motion.div>
         ))}
       </div>
