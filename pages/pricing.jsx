@@ -106,7 +106,7 @@ export default function Pricing() {
           <p className="text-lg md:text-xl font-semibold text-neonPurple mb-8">
             Start saving 10+ hours/week in less than 7 days. Pick your plan.
           </p>
-          <NeonButton text="Book a Demo" href="https://calendly.com/nikola-nikolov1/30min" />
+          <NeonButton text="Book a Demo" href="https://calendly.com/nikola-nikolov1/ai-assistant-discovery-call" />
         </section>
 
         {/* Pricing Cards */}
