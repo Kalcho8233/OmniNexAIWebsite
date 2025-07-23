@@ -94,7 +94,6 @@ export default function Pricing() {
       <Head>
         <title>Pricing | OmniNex AI Plans</title>
         <meta name="description" content="Compare OmniNex pricing plans for custom AI assistants. From lean startup teams to full-scale agency automation – see which plan fits your business." />
-        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
       </Head>
 
       <Navbar />
@@ -121,7 +120,7 @@ export default function Pricing() {
                   💜 Most Chosen
                 </div>
               )}
-              <div>
+              <div className="flex flex-col flex-grow">
                 <h2 className="text-2xl font-semibold mb-2 text-primaryText">{plan.name}</h2>
                 <p className={`font-semibold ${plan.text}`}>{plan.price}</p>
                 <PlanROIText plan={plan.name} />
