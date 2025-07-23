@@ -30,7 +30,7 @@ export default function FinalCTA() {
         transition={{ delay: 0.4, duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <NeonButton text="Get Started" href="https://calendly.com/nikola-nikolov1/30min" />
+        <NeonButton text="Get Started" href="https://calendly.com/nikola-nikolov1/ai-assistant-discovery-call" />
       </motion.div>
     </section>
   );
