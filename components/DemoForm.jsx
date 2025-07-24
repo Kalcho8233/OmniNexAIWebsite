@@ -24,7 +24,7 @@ export default function DemoForm() {
     };
 
     try {
-      await fetch('https://kolio.app.n8n.cloud/webhook/omninexai', {
+      await fetch('https://n8n.srv925690.hstgr.cloud/webhook/omninexai', { // <-- URL сменен тук
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(submittedData),
