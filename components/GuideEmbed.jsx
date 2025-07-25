@@ -20,7 +20,7 @@ export default function GuideEmbed() {
       </p>
 
       <motion.a
-        href="https://docs.google.com/document/d/15Mj_b666Itz3vBRaXTvZ9L0Z6rD_qM-q/edit?usp=sharing&ouid=116131652319321811113&rtpof=true&sd=true"
+        href="https://docs.google.com/document/d/1fIK1zeDHiL0nARLYf1V32F_16JV1z3jG/edit?usp=sharing&ouid=116131652319321811113&rtpof=true&sd=true"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 text-neonPurple hover:text-neonBlue underline text-xl font-semibold transition"
