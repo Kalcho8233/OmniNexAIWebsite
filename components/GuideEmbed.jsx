@@ -16,7 +16,7 @@ export default function GuideEmbed() {
       </motion.h2>
 
       <p className="text-gray-600 mb-8 max-w-2xl mx-auto text-lg">
-        Explore how ClarityGPT works behind the scenes, how we build your assistant, and what the onboarding looks like.
+        Explore how our GPTs work behind the scenes, how we build your assistant, and what the onboarding looks like.
       </p>
 
       <motion.a
