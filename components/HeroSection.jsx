@@ -10,7 +10,7 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        We build custom AI workflow assistants that run your operations — via chat or on autopilot.
+        We build custom AI workflow assistants that run your operations - via chat or on autopilot.
         <br />
       </motion.h1>
 
@@ -21,7 +21,7 @@ export default function HeroSection() {
         transition={{ delay: 0.3, duration: 0.8 }}
       >
         Type a task in plain language and it gets done. Or schedule it to run hands-free. 
-        From reporting and follow-ups to data syncs and client workflows — your assistant executes reliably and follows your rules.
+        From reporting and follow-ups to data syncs and client workflows - your assistant executes reliably and follows your rules.
       </motion.p>
 
       <motion.div
