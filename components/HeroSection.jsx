@@ -10,7 +10,8 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        We build custom GPT assistants that turn chaos into clarity — for your agency, automatically. <br />
+        We build custom AI workflow assistants that run your operations — via chat or on autopilot.
+        <br />
       </motion.h1>
 
       <motion.p
@@ -19,7 +20,8 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8 }}
       >
-        Imagine every meeting auto-summarized, action items tracked, and client-ready notes delivered by an AI that never forgets and works in your team’s exact style.
+        Type a task in plain language and it gets done. Or schedule it to run hands-free. 
+        From reporting and follow-ups to data syncs and client workflows — your assistant executes reliably and follows your rules.
       </motion.p>
 
       <motion.div
