@@ -61,7 +61,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* OUR STORY (rewritten) */}
+        {/* OUR STORY (your exact copy) */}
         <section className="px-6 md:px-16 py-16 bg-[#fafbff]">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Story</h2>
@@ -82,12 +82,22 @@ export default function About() {
                 it delivers results you can trust. No black boxes, no guesswork — just clear metrics
                 and consistent performance.
               </p>
+              <p>
+                OmniNex exists to make automation feel effortless — so your team can do more with
+                less friction, every single day.
+              </p>
             </div>
+          </div>
+        </section>
 
-            {/* Mini-timeline bullets (new visual, different от предишния) */}
-            <div className="relative max-w-4xl mx-auto mt-10">
-              {/* vertical rail */}
-              <span className="pointer-events-none absolute left-5 top-0 bottom-0 w-[3px] bg-gradient-to-b from-[#B300FF] via-[#BC13FE] to-[#00E5FF] rounded-full" />
+        {/* OUR PHILOSOPHY (neon mini-timeline, separate section) */}
+        <section className="px-6 md:px-16 py-16">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Philosophy</h2>
+
+            <div className="relative mt-6">
+              {/* Neon rail */}
+              <div className="pointer-events-none absolute left-1.5 top-0 bottom-0 w-[3px] bg-gradient-to-b from-[#B300FF] via-[#BC13FE] to-[#00E5FF] rounded-full" />
 
               {[
                 {
@@ -102,27 +112,22 @@ export default function About() {
                   title: "Your workflow, your way",
                   desc: "Tailored to your stack and guardrails today; scalable for tomorrow.",
                 },
-              ].map((item, i) => (
+              ].map((item, idx) => (
                 <motion.div
-                  key={i}
-                  className="relative pl-14 pr-6 py-5 mb-5 rounded-xl border border-neonBlue bg-white shadow-sm hover:shadow-[0_0_24px_rgba(188,19,254,0.15)] transition-all"
-                  initial={{ opacity: 0, y: 14 }}
+                  key={idx}
+                  className="relative pl-10 md:pl-12 pr-6 py-5 mb-5 rounded-2xl border border-neonBlue bg-white shadow-sm hover:shadow-[0_0_32px_#BC13FE44] transition-all"
+                  initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.06 }}
+                  transition={{ duration: 0.45, delay: idx * 0.06 }}
                 >
-                  {/* node */}
-                  <span className="absolute left-3 top-6 h-5 w-5 rounded-full bg-gradient-to-br from-[#B300FF] to-[#00E5FF] shadow-[0_0_12px_rgba(188,19,254,0.6)]" />
-                  <h3 className="font-semibold text-lg text-gray-900">{item.title}</h3>
+                  {/* Node + glow */}
+                  <span className="absolute left-0 top-6 h-4 w-4 rounded-full bg-neonPurple shadow-[0_0_18px_#BC13FE] ring-4 ring-[#BC13FE22]" />
+                  <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
                   <p className="text-gray-700 mt-1">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
-
-            <p className="mt-6 text-lg text-gray-800">
-              OmniNex exists to make automation feel effortless — so your team can do more with less
-              friction, every single day.
-            </p>
           </div>
         </section>
 
