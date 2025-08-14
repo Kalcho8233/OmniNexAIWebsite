@@ -20,7 +20,10 @@ export default function About() {
     <>
       <Head>
         <title>About Us | OmniNex</title>
-        <meta name="description" content="Learn more about OmniNex – who we are, what we do, and how we help businesses grow with AI automation." />
+        <meta
+          name="description"
+          content="Learn more about OmniNex – who we are, how we design custom AI workflow assistants, and how we help teams get measurable results."
+        />
       </Head>
 
       <Navbar />
@@ -30,39 +33,50 @@ export default function About() {
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">About OmniNex</h1>
 
           <section className="space-y-6 text-lg leading-relaxed">
-            <p>Hello, I’m Nikola — founder of OmniNex.</p>
+            <p>Hi, I’m Nikola — founder of OmniNex.</p>
             <p>
-              I help businesses bring AI into their daily operations with custom GPT assistants and automation strategies.
-              Think of it like hiring a digital teammate — one that never forgets, never takes breaks, and works 24/7.
+              We help teams run their operations with <strong>custom AI workflow assistants</strong> — usable via chat when you ask, or fully on autopilot when you’re busy. Each assistant follows your rules, plugs into your stack, and delivers consistent results.
             </p>
 
             <h2 className="text-2xl font-semibold mt-10">What We Do</h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Custom GPT Assistants:</strong> Reply to clients, summarize meetings, automate workflows — tailored to your business.</li>
-              <li><strong>Workflow Automation:</strong> Simplify internal processes with no-code/low-code tools.</li>
-              <li><strong>AI Implementation:</strong> Adopt AI the right way — no hype, just results.</li>
-              <li><strong>Human-Centric AI:</strong> Every assistant supports real people — your team, your clients, your ops.</li>
+              <li>
+                <strong>Custom AI Workflow Assistants</strong> — trigger in chat or on schedule; handle follow-ups, handoffs, reporting, QA checks and more.
+              </li>
+              <li>
+                <strong>Process Automation</strong> — connect the tools you already use and orchestrate reliable, multi-step workflows across teams.
+              </li>
+              <li>
+                <strong>Knowledge & Guardrails</strong> — we structure your SOPs and add permissions so the assistant acts safely and predictably.
+              </li>
+              <li>
+                <strong>Monitoring & Iteration</strong> — performance reviews, error handling and continuous improvements baked in.
+              </li>
             </ul>
 
-            <h2 className="text-2xl font-semibold mt-10">Tools We Use</h2>
+            <h2 className="text-2xl font-semibold mt-10">How We Deliver</h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>GPTs & LLMs:</strong> OpenAI GPT-4, ChatGPT, Prompt Engineering</li>
-              <li><strong>Automation:</strong> Make (Integromat), n8n, Notion AI, Dify</li>
-              <li><strong>Tech Stack:</strong> HTML, CSS, beginner Python, Canva</li>
-              <li><strong>Strengths:</strong> Communication, Problem Solving, Self-learning, Collaboration</li>
+              <li>
+                <strong>Discover & Plan</strong> — identify the highest-impact workflows and define success metrics.
+              </li>
+              <li>
+                <strong>Build & Integrate</strong> — design the assistant around your process and connect it to your stack.
+              </li>
+              <li>
+                <strong>Launch & Optimize</strong> — dry run with your team, then go live with monitoring and regular enhancements.
+              </li>
             </ul>
 
             <h2 className="text-2xl font-semibold mt-10">Why Work With Us?</h2>
             <p>
-              We're not just AI builders — we're business-minded problem solvers.
-              You’ll get tools that actually reduce workload, enhance client experience, and help you scale with speed.
+              Outcomes over hype. We build for reliability, adoption and ROI — assistants that reduce workload, cut errors, and scale with you. Quality and stability first; no surprises in production.
             </p>
 
             <h2 className="text-2xl font-semibold mt-10">What We’re Working On Now</h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Growing our AI assistant portfolio</li>
-              <li>Helping service businesses streamline with automation</li>
-              <li>Exploring new AI use cases that save time & boost client value</li>
+              <li>Expanding our library of proven automation patterns</li>
+              <li>Helping service businesses standardize and scale operations</li>
+              <li>New use cases that save hours per week and improve client experience</li>
             </ul>
 
             {/* Founder Profile with Animation */}
