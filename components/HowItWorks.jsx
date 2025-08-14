@@ -14,7 +14,7 @@ export default function HowItWorks() {
         How It Works
       </motion.h2>
 
-      {/* СТЪПКИ НАД КАРТИТЕ */}
+      {/* Steps above cards */}
       <motion.div
         className="text-center mb-14"
         initial={{ opacity: 0, y: 10 }}
@@ -23,11 +23,11 @@ export default function HowItWorks() {
         viewport={{ once: true }}
       >
         <p className="text-neonPurple text-lg md:text-2xl font-semibold leading-relaxed max-w-3xl mx-auto">
-          Discovery: Fill out a 5-min questionnaire or book a consult.<br/>
+          Discovery: Identify your high-impact processes during a quick call or form.<br/>
           <br/>
-          Build & Demo: We create and demo your custom GPT — ready in days.<br/>
+          Build & Demo: We design and connect your custom AI workflow assistant – ready to preview in days.<br/>
           <br/>
-          Deploy & Support: Your team gets a link, starts using it instantly. No installation. No code. No headaches.
+          Deploy & Support: Your team uses it instantly via chat or on autopilot. No extra software. No disruptions.
         </p>
       </motion.div>
 
@@ -43,8 +43,8 @@ export default function HowItWorks() {
           <div className="mb-4 flex items-center justify-center">
             <FaLock size={36} className="text-neonPurple drop-shadow-[0_0_10px_#BC13FE88]" />
           </div>
-          <h3 className="text-xl font-semibold text-black mb-2 tracking-tight">100% Private & Secure</h3>
-          <p className="text-gray-500 text-base">(works inside your ChatGPT account)</p>
+          <h3 className="text-xl font-semibold text-black mb-2 tracking-tight">Secure by design</h3>
+          <p className="text-gray-500 text-base">We follow strict data access rules and keep your workflows private to your business.</p>
         </motion.div>
 
         {/* 2 */}
@@ -58,7 +58,8 @@ export default function HowItWorks() {
           <div className="mb-4 flex items-center justify-center">
             <FaCode size={36} className="text-neonPurple drop-shadow-[0_0_10px_#BC13FE88]" />
           </div>
-          <h3 className="text-xl font-semibold text-black mb-2 tracking-tight">No code required</h3>
+          <h3 className="text-xl font-semibold text-black mb-2 tracking-tight">No code needed</h3>
+          <p className="text-gray-500 text-base">Your assistant is ready to run – we handle the setup, so your team focuses on using it.</p>
         </motion.div>
 
         {/* 3 */}
@@ -72,7 +73,8 @@ export default function HowItWorks() {
           <div className="mb-4 flex items-center justify-center">
             <FaStar size={36} className="text-neonPurple drop-shadow-[0_0_10px_#BC13FE88]" />
           </div>
-          <h3 className="text-xl font-semibold text-black mb-2 tracking-tight">Fully branded for your agency</h3>
+          <h3 className="text-xl font-semibold text-black mb-2 tracking-tight">Custom to your brand</h3>
+          <p className="text-gray-500 text-base">Built around your processes, branding, and preferred ways of working.</p>
         </motion.div>
 
         {/* 4 */}
@@ -86,8 +88,8 @@ export default function HowItWorks() {
           <div className="mb-4 flex items-center justify-center">
             <FaUserCheck size={36} className="text-neonPurple drop-shadow-[0_0_10px_#BC13FE88]" />
           </div>
-          <h3 className="text-xl font-semibold text-black mb-2 tracking-tight">Works with free ChatGPT accounts</h3>
-          <p className="text-gray-500 text-base">Plus is optional</p>
+          <h3 className="text-xl font-semibold text-black mb-2 tracking-tight">Simple to use</h3>
+          <p className="text-gray-500 text-base">Trigger it in chat or let it run automatically – whichever fits your workflow.</p>
         </motion.div>
       </div>
     </section>
