@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 
 const stats = [
-  { value: '2.4x more deals', label: 'From the same leads.' },
-  { value: '42+ hrs/month back', label: 'A full work week saved.' },
-  { value: '621% avg. ROI', label: '€1 in → €6+ out.' }
+  { value: 'More time.' },
+  { value: 'More energy.' },
+  { value: 'More results.' }
 ];
 
 const Card = ({ value, label, delay = 0 }) => (
@@ -38,7 +38,7 @@ export default function StatsSection() {
         transition={{ delay: 0.1, duration: 0.5 }}
         viewport={{ once: true }}
       >
-        More time. More energy. More results.
+        
       </motion.p>
 
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
