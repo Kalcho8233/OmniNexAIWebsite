@@ -5,12 +5,12 @@ export default function HeroSection() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 md:px-12 bg-white">
       <motion.h1 
-        className="text-4xl md:text-6xl font-bold mb-6 text-neonPurple"
+        className="text-4xl md:text-6xl font-bold mb-6 text-black"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Building systems that work — so your team can, too.
+        We are building systems that work - so your team can, too.
       </motion.h1>
 
       <motion.p
