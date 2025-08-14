@@ -50,11 +50,11 @@ export default function Home() {
                 )
               },
               {
-                label: "🔹 How long does setup take?",
+                label: "🔹 How do you make sure it’s truly ready?",
                 children: (
-                  <p>
-                    <strong>Launch</strong> typically goes live in under 7 days. <strong>Optimize/Scale</strong> depend on scope – we confirm a clear timeline after discovery. We handle the setup end-to-end.
-                  </p>
+    <p>
+      We launch when it’s right — not just fast. We stress-test the assistant, fix what breaks, and test again. Only after it passes our QA standard — real-world scenarios, built-in guardrails, and a dry run with your team — do we go live. Quality & stability first, no surprises in production.
+    </p>
                 )
               },
               {
