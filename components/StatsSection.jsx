@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 const stats = [
-  { value: 'More time.' },
+  { value: 'More\n time.' },
   { value: 'More energy.' },
   { value: 'More results.' }
 ];
@@ -14,7 +14,7 @@ const Card = ({ value, label, delay = 0 }) => (
     transition={{ delay, duration: 0.5 }}
     viewport={{ once: true }}
   >
-    <div className="text-neonPurple text-3xl md:text-4xl font-bold mb-2">{value}</div>
+    <div className="whitespace-pre-line text-neonPurple text-3xl md:text-4xl font-bold mb-2 text-center">{value}</div>
     <div className="text-gray-900 text-lg md:text-xl">{label}</div>
   </motion.div>
 );
@@ -45,6 +45,16 @@ export default function StatsSection() {
         {stats.map((s, i) => (
           <Card key={i} {...s} delay={i * 0.05} />
         ))}
+      </div>
+
+      {/* CTA Button */}
+      <div className="mt-12">
+        <a
+          href="/about#results"
+          className="inline-block bg-neonPurple text-white font-semibold px-6 py-3 rounded-full hover:shadow-[0_0_10px_#c084fc] transition"
+        >
+          See how we measure this →
+        </a>
       </div>
     </section>
   );
