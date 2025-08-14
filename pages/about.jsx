@@ -54,9 +54,9 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
             >
-              Type a task in <strong>plain language</strong> and it gets done. Or schedule it to run{" "}
+              Type a task in <strong>plain language</strong> and it gets done. Or schedule it to run {" "}
               <strong>hands-free</strong>. From reporting and follow-ups to data syncs and client
-              workflows — your assistant executes <strong>reliably</strong> and follows{" "}
+              workflows — your assistant executes <strong>reliably</strong> and follows {" "}
               <strong>your rules</strong>.
             </motion.p>
           </div>
@@ -69,21 +69,21 @@ export default function About() {
 
             <div className="space-y-4 text-lg text-gray-800 leading-relaxed">
               <p>
-                OmniNex was born from a simple truth: most teams don’t need{" "}
-                <strong>more software</strong> — they need <strong>smarter</strong>, more{" "}
+                OmniNex was born from a simple truth: most teams don’t need {" "}
+                <strong>more software</strong> — they need <strong>smarter</strong>, more {" "}
                 <strong>dependable workflows</strong> that get real work done. Too many tools
-                promise the world but add <strong>complexity</strong>, break under{" "}
+                promise the world but add <strong>complexity</strong>, break under {" "}
                 <strong>pressure</strong>, or waste time on <strong>busywork</strong>.
               </p>
               <p>
                 We set out to change that. Our custom <strong>AI workflow assistants</strong> are
-                designed to work seamlessly with <strong>your processes</strong>, follow{" "}
+                designed to work seamlessly with <strong>your processes</strong>, follow {" "}
                 <strong>your rules</strong>, and respect <strong>your data</strong>. They adapt to
                 your business — not the other way around.
               </p>
               <p>
                 Every system is <strong>battle-tested</strong> under real-world conditions to ensure
-                it delivers results you can trust. No <strong>black boxes</strong>, no{" "}
+                it delivers results you can trust. No <strong>black boxes</strong>, no {" "}
                 <strong>guesswork</strong> — just clear metrics and <strong>consistent
                 performance</strong>.
               </p>
@@ -95,7 +95,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* OUR PHILOSOPHY – Neon cards with left accent (cleaner layout) */}
+        {/* OUR PHILOSOPHY */}
         <section className="px-6 md:px-16 py-16">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Philosophy</h2>
@@ -106,7 +106,7 @@ export default function About() {
                   title: "Quality over hype",
                   desc: (
                     <>
-                      <strong>Practical systems</strong> that last — engineered for{" "}
+                      <strong>Practical systems</strong> that last — engineered for {" "}
                       <strong>stability</strong> before scale.
                     </>
                   ),
@@ -115,7 +115,7 @@ export default function About() {
                   title: "Measurable impact",
                   desc: (
                     <>
-                      <strong>Real numbers</strong>, not vague promises —{" "}
+                      <strong>Real numbers</strong>, not vague promises — {" "}
                       <strong>time back</strong>, <strong>throughput</strong>, <strong>ROI</strong>.
                     </>
                   ),
@@ -124,7 +124,7 @@ export default function About() {
                   title: "Your workflow, your way",
                   desc: (
                     <>
-                      Tailored to your <strong>stack</strong> and <strong>guardrails</strong>{" "}
+                      Tailored to your <strong>stack</strong> and <strong>guardrails</strong> {" "}
                       today; <strong>scalable</strong> for tomorrow.
                     </>
                   ),
@@ -139,18 +139,22 @@ export default function About() {
                   transition={{ duration: 0.45, delay: idx * 0.06 }}
                 >
                   {/* Neon left stripe */}
-<span className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#B300FF] via-[#BC13FE] to-[#00E5FF]" />
+                  <span className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#B300FF] via-[#BC13FE] to-[#00E5FF]" />
 
-<h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
-<p className="text-gray-700 mt-1">{item.desc}</p>
-
+                  <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
+                  <p className="text-gray-700 mt-1">{item.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* RESULTS */}
         <section id="results" className="px-6 md:px-16 py-20">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-2">Results You Can See</h2>
             <p className="text-gray-700 mb-10">
-              We measure success in what matters most — <strong>time back</strong>,{" "}
+              We measure success in what matters most — <strong>time back</strong>, {" "}
               <strong>efficiency</strong>, and <strong>business results</strong>.
             </p>
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
@@ -237,7 +241,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* FOUNDER + CTA (no underline) */}
+        {/* FOUNDER + CTA */}
         <section className="px-6 md:px-16 pb-24">
           <div className="max-w-5xl mx-auto">
             <div className="rounded-2xl border border-neonBlue bg-gradient-to-br from-white to-[#fafbff] p-8 text-center shadow-sm">
@@ -250,7 +254,7 @@ export default function About() {
               <h3 className="mt-5 text-2xl font-semibold">Nikola Nikolov</h3>
               <p className="mt-1 text-sm text-gray-700">Founder & AI Consultant at OmniNex</p>
               <p className="mt-4 text-gray-800 max-w-3xl mx-auto">
-                We care about <strong>dependable systems</strong> and{" "}
+                We care about <strong>dependable systems</strong> and {" "}
                 <strong>measurable wins</strong>. If an automation doesn’t hold under real-world
                 conditions, it doesn’t ship.
               </p>
