@@ -46,7 +46,7 @@ export default function About() {
               transition={{ duration: 0.5 }}
             >
               We build <span className="text-neonPurple">custom AI workflow assistants</span> that
-              run your operations — via chat or on autopilot.
+              run your operations - via chat or on autopilot.
             </motion.h1>
             <motion.p
               className="mt-5 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto"
@@ -56,7 +56,7 @@ export default function About() {
             >
               Type a task in <strong>plain language</strong> and it gets done. Or schedule it to run {" "}
               <strong>hands-free</strong>. From reporting and follow-ups to data syncs and client
-              workflows — your assistant executes <strong>reliably</strong> and follows {" "}
+              workflows - your assistant executes <strong>reliably</strong> and follows {" "}
               <strong>your rules</strong>.
             </motion.p>
           </div>
@@ -70,7 +70,7 @@ export default function About() {
             <div className="space-y-4 text-lg text-gray-800 leading-relaxed">
               <p>
                 OmniNex was born from a simple truth: most teams don’t need {" "}
-                <strong>more software</strong> — they need <strong>smarter</strong>, more {" "}
+                <strong>more software</strong> - they need <strong>smarter</strong>, more {" "}
                 <strong>dependable workflows</strong> that get real work done. Too many tools
                 promise the world but add <strong>complexity</strong>, break under {" "}
                 <strong>pressure</strong>, or waste time on <strong>busywork</strong>.
@@ -79,16 +79,16 @@ export default function About() {
                 We set out to change that. Our custom <strong>AI workflow assistants</strong> are
                 designed to work seamlessly with <strong>your processes</strong>, follow {" "}
                 <strong>your rules</strong>, and respect <strong>your data</strong>. They adapt to
-                your business — not the other way around.
+                your business - not the other way around.
               </p>
               <p>
                 Every system is <strong>battle-tested</strong> under real-world conditions to ensure
                 it delivers results you can trust. No <strong>black boxes</strong>, no {" "}
-                <strong>guesswork</strong> — just clear metrics and <strong>consistent
+                <strong>guesswork</strong> - just clear metrics and <strong>consistent
                 performance</strong>.
               </p>
               <p>
-                OmniNex exists to make automation feel <strong>effortless</strong> — so your team
+                OmniNex exists to make automation feel <strong>effortless</strong> - so your team
                 can do more with less friction, every single day.
               </p>
             </div>
@@ -106,7 +106,7 @@ export default function About() {
                   title: "Quality over hype",
                   desc: (
                     <>
-                      <strong>Practical systems</strong> that last — engineered for {" "}
+                      <strong>Practical systems</strong> that last - engineered for {" "}
                       <strong>stability</strong> before scale.
                     </>
                   ),
@@ -154,7 +154,7 @@ export default function About() {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-2">Results You Can See</h2>
             <p className="text-gray-700 mb-10">
-              We measure success in what matters most — <strong>time back</strong>, {" "}
+              We measure success in what matters most - <strong>time back</strong>, {" "}
               <strong>efficiency</strong>, and <strong>business results</strong>.
             </p>
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
@@ -193,7 +193,7 @@ export default function About() {
               ))}
             </div>
             <p className="text-sm text-gray-500 mt-4">
-              (Representative outcomes — actual metrics vary by scope and adoption.)
+              (Representative outcomes - actual metrics vary by scope and adoption.)
             </p>
           </div>
         </section>
