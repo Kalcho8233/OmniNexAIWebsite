@@ -139,17 +139,11 @@ export default function About() {
                   transition={{ duration: 0.45, delay: idx * 0.06 }}
                 >
                   {/* Neon left stripe */}
-                  <span className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#B300FF] via-[#BC13FE] to-[#00E5FF]" />
-                  {/* Glow dot */}
-                  <span className="absolute -left-2 top-6 h-4 w-4 rounded-full bg-neonPurple shadow-[0_0_18px_#BC13FE]"></span>
+<span className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#B300FF] via-[#BC13FE] to-[#00E5FF]" />
 
-                  <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
-                  <p className="text-gray-700 mt-1">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+<h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
+<p className="text-gray-700 mt-1">{item.desc}</p>
+
 
         {/* RESULTS */}
         <section id="results" className="px-6 md:px-16 py-20">
