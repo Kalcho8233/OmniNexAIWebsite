@@ -44,7 +44,7 @@ export default function About() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      We build <span className="text-neonPurple">custom AI workflow assistants</span> that run your operations — via chat or on autopilot.
+      We build <span className="text-neonPurple">custom AI workflow assistants</span> that run your operations - via chat or on autopilot.
     </motion.h1>
     <motion.p
       className="mt-5 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto"
@@ -53,7 +53,7 @@ export default function About() {
       transition={{ delay: 0.1, duration: 0.5 }}
     >
       Type a task in plain language and it gets done. Or schedule it to run hands-free.
-      From reporting and follow-ups to data syncs and client workflows — your assistant executes reliably and follows your rules.
+      From reporting and follow-ups to data syncs and client workflows - your assistant executes reliably and follows your rules.
     </motion.p>
   </div>
 </section>
