@@ -2,12 +2,26 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const useCases = [
-  'AI Assistant for Sales Reps',
-  'Recruiter AI',
-  'Client Support GPT',
-  'AI for Executive Ops',
-  'AI Proposal Generator',
-  'Internal Knowledge Chatbot',
+  'AI Email Classifier & Auto-Responder',
+  'Lead Scoring & CRM Automation',
+  'WhatsApp AI Chatbot',
+  'Google Sheets ↔ Database Sync',
+  'Social Media Content Scheduler',
+  'Invoice Processing & Approval',
+  'AI Resume Screener',
+  'Multi-CRM Data Sync',
+  'Sales Meeting Preparation Assistant',
+  'Slack Notification Hub',
+  'AI Content Generator with SEO',
+  'Document Approval Workflow',
+  'Customer Onboarding Sequence',
+  'Competitor Monitoring System',
+  'Expense Report Automation',
+  'Meeting Notes to CRM Sync',
+  'Newsletter Automation',
+  'SEO Keyword Research Automation',
+  'Lead Response Time Optimizer',
+  'Executive Dashboard Generator'
 ];
 
 export default function UseCaseCarousel() {
@@ -26,7 +40,7 @@ export default function UseCaseCarousel() {
         Explore Real Use Cases
       </h2>
 
-      {/* Промени фона на неоново лилаво: */}
+      {/* Neon purple background */}
       <div className="h-28 md:h-32 flex items-center justify-center overflow-hidden rounded-xl border border-neonPurple bg-neonPurple max-w-3xl mx-auto">
         <AnimatePresence mode="wait">
           <motion.div
@@ -35,7 +49,7 @@ export default function UseCaseCarousel() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="text-white text-2xl md:text-4xl font-semibold px-4"
+            className="text-white text-2xl md:text-4xl font-semibold px-4 text-center"
           >
             {useCases[index]}
           </motion.div>
