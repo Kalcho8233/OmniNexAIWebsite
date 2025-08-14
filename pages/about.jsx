@@ -46,7 +46,7 @@ export default function About() {
               transition={{ duration: 0.5 }}
             >
               We build <span className="text-neonPurple">custom AI workflow assistants</span> that
-              run your operations - via chat or on autopilot.
+              run your operations — via chat or on autopilot.
             </motion.h1>
             <motion.p
               className="mt-5 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto"
@@ -54,75 +54,95 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
             >
-              Type a task in plain language and it gets done. Or schedule it to run hands-free.
-              From reporting and follow-ups to data syncs and client workflows — your assistant
-              executes reliably and follows your rules.
+              Type a task in <strong>plain language</strong> and it gets done. Or schedule it to run{" "}
+              <strong>hands-free</strong>. From reporting and follow-ups to data syncs and client
+              workflows — your assistant executes <strong>reliably</strong> and follows{" "}
+              <strong>your rules</strong>.
             </motion.p>
           </div>
         </section>
 
-        {/* OUR STORY (your exact copy) */}
+        {/* OUR STORY */}
         <section className="px-6 md:px-16 py-16 bg-[#fafbff]">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Story</h2>
 
             <div className="space-y-4 text-lg text-gray-800 leading-relaxed">
               <p>
-                OmniNex was born from a simple truth: most teams don’t need more software — they need
-                smarter, more dependable workflows that get real work done. Too many tools promise the
-                world but add complexity, break under pressure, or waste time on busywork.
+                OmniNex was born from a simple truth: most teams don’t need{" "}
+                <strong>more software</strong> — they need <strong>smarter</strong>, more{" "}
+                <strong>dependable workflows</strong> that get real work done. Too many tools
+                promise the world but add <strong>complexity</strong>, break under{" "}
+                <strong>pressure</strong>, or waste time on <strong>busywork</strong>.
               </p>
               <p>
                 We set out to change that. Our custom <strong>AI workflow assistants</strong> are
-                designed to work seamlessly with your processes, follow your rules, and respect your
-                data. They adapt to your business instead of forcing you to adapt to them.
+                designed to work seamlessly with <strong>your processes</strong>, follow{" "}
+                <strong>your rules</strong>, and respect <strong>your data</strong>. They adapt to
+                your business — not the other way around.
               </p>
               <p>
                 Every system is <strong>battle-tested</strong> under real-world conditions to ensure
-                it delivers results you can trust. No black boxes, no guesswork — just clear metrics
-                and consistent performance.
+                it delivers results you can trust. No <strong>black boxes</strong>, no{" "}
+                <strong>guesswork</strong> — just clear metrics and <strong>consistent
+                performance</strong>.
               </p>
               <p>
-                OmniNex exists to make automation feel effortless — so your team can do more with
-                less friction, every single day.
+                OmniNex exists to make automation feel <strong>effortless</strong> — so your team
+                can do more with less friction, every single day.
               </p>
             </div>
           </div>
         </section>
 
-        {/* OUR PHILOSOPHY (neon mini-timeline, separate section) */}
+        {/* OUR PHILOSOPHY – Neon cards with left accent (cleaner layout) */}
         <section className="px-6 md:px-16 py-16">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Philosophy</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Philosophy</h2>
 
-            <div className="relative mt-6">
-              {/* Neon rail */}
-              <div className="pointer-events-none absolute left-1.5 top-0 bottom-0 w-[3px] bg-gradient-to-b from-[#B300FF] via-[#BC13FE] to-[#00E5FF] rounded-full" />
-
+            <div className="space-y-5">
               {[
                 {
                   title: "Quality over hype",
-                  desc: "Practical systems that last — engineered for stability before scale.",
+                  desc: (
+                    <>
+                      <strong>Practical systems</strong> that last — engineered for{" "}
+                      <strong>stability</strong> before scale.
+                    </>
+                  ),
                 },
                 {
                   title: "Measurable impact",
-                  desc: "Real numbers, not vague promises — time back, throughput, ROI.",
+                  desc: (
+                    <>
+                      <strong>Real numbers</strong>, not vague promises —{" "}
+                      <strong>time back</strong>, <strong>throughput</strong>, <strong>ROI</strong>.
+                    </>
+                  ),
                 },
                 {
                   title: "Your workflow, your way",
-                  desc: "Tailored to your stack and guardrails today; scalable for tomorrow.",
+                  desc: (
+                    <>
+                      Tailored to your <strong>stack</strong> and <strong>guardrails</strong>{" "}
+                      today; <strong>scalable</strong> for tomorrow.
+                    </>
+                  ),
                 },
               ].map((item, idx) => (
                 <motion.div
                   key={idx}
-                  className="relative pl-10 md:pl-12 pr-6 py-5 mb-5 rounded-2xl border border-neonBlue bg-white shadow-sm hover:shadow-[0_0_32px_#BC13FE44] transition-all"
+                  className="relative overflow-hidden rounded-2xl border border-neonBlue bg-white p-6 md:p-7 shadow-sm hover:shadow-[0_0_36px_rgba(188,19,254,0.18)] transition-shadow"
                   initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.45, delay: idx * 0.06 }}
                 >
-                  {/* Node + glow */}
-                  <span className="absolute left-0 top-6 h-4 w-4 rounded-full bg-neonPurple shadow-[0_0_18px_#BC13FE] ring-4 ring-[#BC13FE22]" />
+                  {/* Neon left stripe */}
+                  <span className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#B300FF] via-[#BC13FE] to-[#00E5FF]" />
+                  {/* Glow dot */}
+                  <span className="absolute -left-2 top-6 h-4 w-4 rounded-full bg-neonPurple shadow-[0_0_18px_#BC13FE]"></span>
+
                   <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
                   <p className="text-gray-700 mt-1">{item.desc}</p>
                 </motion.div>
@@ -131,12 +151,13 @@ export default function About() {
           </div>
         </section>
 
-        {/* OUR IMPACT (KPIs) */}
+        {/* RESULTS */}
         <section id="results" className="px-6 md:px-16 py-20">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-2">Results You Can See</h2>
             <p className="text-gray-700 mb-10">
-              We measure success in what matters most — time back, efficiency, and business results.
+              We measure success in what matters most — <strong>time back</strong>,{" "}
+              <strong>efficiency</strong>, and <strong>business results</strong>.
             </p>
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
               {[
@@ -179,7 +200,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* HOW WE'RE DIFFERENT */}
+        {/* DIFFERENT */}
         <section className="px-6 md:px-16 py-20 bg-[#fafbff]">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">How We’re Different</h2>
@@ -222,7 +243,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* FOUNDER CARD + CTA */}
+        {/* FOUNDER + CTA (no underline) */}
         <section className="px-6 md:px-16 pb-24">
           <div className="max-w-5xl mx-auto">
             <div className="rounded-2xl border border-neonBlue bg-gradient-to-br from-white to-[#fafbff] p-8 text-center shadow-sm">
@@ -235,15 +256,16 @@ export default function About() {
               <h3 className="mt-5 text-2xl font-semibold">Nikola Nikolov</h3>
               <p className="mt-1 text-sm text-gray-700">Founder & AI Consultant at OmniNex</p>
               <p className="mt-4 text-gray-800 max-w-3xl mx-auto">
-                We care about dependable systems and measurable wins. If an automation doesn’t hold
-                under real-world conditions, it doesn’t ship.
+                We care about <strong>dependable systems</strong> and{" "}
+                <strong>measurable wins</strong>. If an automation doesn’t hold under real-world
+                conditions, it doesn’t ship.
               </p>
             </div>
 
             <div className="text-center mt-10">
               <a
                 href="/#contact"
-                className="bg-gradient-to-r from-[#B300FF] to-[#FF37B5] text-white font-semibold px-8 py-3 rounded-full hover:shadow-[0_0_18px_#c084fc] transition"
+                className="no-underline hover:no-underline inline-block bg-gradient-to-r from-[#B300FF] to-[#FF37B5] text-white font-semibold px-8 py-3 rounded-full hover:shadow-[0_0_18px_#c084fc] transition"
               >
                 Let’s Build Smarter Together
               </a>
