@@ -21,7 +21,7 @@ export default function About() {
         <title>About Us | OmniNex</title>
         <meta
           name="description"
-          content="About OmniNex — our story, what makes us different, and the measurable impact our AI workflow assistants deliver."
+          content="About OmniNex - our story, what makes us different, and the measurable impact our AI workflow assistants deliver."
         />
       </Head>
 
@@ -44,7 +44,7 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Building <span className="text-neonPurple">systems that work</span> —
+              Building <span className="text-neonPurple">systems that work</span> -
               so your team can, too.
             </motion.h1>
             <motion.p
@@ -63,7 +63,7 @@ export default function About() {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Story</h2>
             <p className="text-lg text-gray-800 leading-relaxed">
-              OmniNex started with a simple idea: most teams don’t need more tools — they need
+              OmniNex started with a simple idea: most teams don’t need more tools - they need
               <span className="font-semibold"> dependable workflows</span> that actually do the work. We build assistants that follow your rules,
               respect your data, and deliver consistent outcomes. Quality over hype. Measurable wins over
               promises.
@@ -76,7 +76,7 @@ export default function About() {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-2">Results You Can See</h2>
             <p className="text-gray-700 mb-10">
-              We measure success in what matters most — time back, efficiency, and business results.
+              We measure success in what matters most - time back, efficiency, and business results.
             </p>
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
               {[
@@ -98,7 +98,7 @@ export default function About() {
                 </motion.div>
               ))}
             </div>
-            <p className="text-sm text-gray-500 mt-4">(Representative outcomes — actual metrics vary by scope and adoption.)</p>
+            <p className="text-sm text-gray-500 mt-4">(Representative outcomes - actual metrics vary by scope and adoption.)</p>
           </div>
         </section>
 
@@ -150,7 +150,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto text-center">
             <FaQuoteLeft className="mx-auto text-neonPurple mb-3" />
             <p className="text-xl md:text-2xl text-gray-900 font-medium leading-relaxed">
-              “In two weeks, OmniNex eliminated our hand‑offs and cut follow‑ups in half. The assistant now runs daily — our team finally has focus time.”
+              “In two weeks, OmniNex eliminated our hand‑offs and cut follow‑ups in half. The assistant now runs daily - our team finally has focus time.”
             </p>
             <p className="mt-2 text-sm text-gray-500">— Placeholder Client, Operations Lead</p>
           </div>
