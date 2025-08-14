@@ -14,7 +14,7 @@ export default function FounderQuote() {
           “OmniNex is your second brain - built to think fast, never sleep, and grow with your ambition.”
         </span>
         <footer className="mt-6 text-base not-italic text-gray-500">
-          — Nikola Nikolov, CEO of OmniNex
+    — Nikola Nikolov, CEO of OmniNex
         </footer>
       </motion.blockquote>
     </section>
