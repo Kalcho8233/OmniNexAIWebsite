@@ -1,4 +1,3 @@
-// components/GuideEmbed.jsx
 import { motion } from 'framer-motion';
 import { FaSearch, FaCogs, FaRocket } from 'react-icons/fa';
 
@@ -22,7 +21,7 @@ const steps = [
 
 export default function GuideEmbed() {
   return (
-    <section className="py-20 px-6 md:px-12 bg-white">
+    <section id="process" className="py-20 px-6 md:px-12 bg-white">
       <motion.h2
         className="text-3xl md:text-5xl font-bold text-gray-900 mb-2 text-center"
         initial={{ opacity: 0, y: 20 }}
@@ -40,7 +39,7 @@ export default function GuideEmbed() {
         transition={{ delay: 0.1, duration: 0.6 }}
         viewport={{ once: true }}
       >
-        A simple, predictable 3‑step process.
+        A simple, predictable 3-step process.
       </motion.p>
 
       <div className="relative max-w-3xl mx-auto">
