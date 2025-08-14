@@ -145,17 +145,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* CLIENT PROOF */}
-        <section className="px-6 md:px-16 py-20">
-          <div className="max-w-4xl mx-auto text-center">
-            <FaQuoteLeft className="mx-auto text-neonPurple mb-3" />
-            <p className="text-xl md:text-2xl text-gray-900 font-medium leading-relaxed">
-              “In two weeks, OmniNex eliminated our hand‑offs and cut follow‑ups in half. The assistant now runs daily - our team finally has focus time.”
-            </p>
-            <p className="mt-2 text-sm text-gray-500">— Placeholder Client, Operations Lead</p>
-          </div>
-        </section>
-
         {/* FOUNDER CARD */}
         <section className="px-6 md:px-16 pb-24">
           <div className="max-w-5xl mx-auto">
