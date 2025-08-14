@@ -37,8 +37,7 @@ export default function Home() {
                 label: "🔹 What makes OmniNex unique?",
                 children: (
                   <p>
-                    We combine <strong>deep customization</strong> with <strong>plug-and-play speed</strong>.
-                    Your assistant is trained on your SOPs, deployed in your tools, and takes real-time action — in just days.
+                    We build assistants around <strong>your exact process</strong> – not templates. Operate by chat when you ask or run on autopilot when you’re busy. Connected to your stack, engineered for reliability and measurable ROI.
                   </p>
                 )
               },
@@ -46,7 +45,7 @@ export default function Home() {
                 label: "🔹 What kind of tasks can my assistant handle?",
                 children: (
                   <p>
-                    Anything repetitive or time-consuming — like sending follow-ups, summarizing meetings, answering team questions, updating CRMs, and more.
+                    Repetitive, rules-based work: follow-ups and reminders, meeting summaries and handoffs, lead routing/scoring, report generation, content drafts, invoice/expense processing, data syncs, onboarding sequences – and more.
                   </p>
                 )
               },
@@ -54,7 +53,7 @@ export default function Home() {
                 label: "🔹 How long does setup take?",
                 children: (
                   <p>
-                    Just a few days. We customize everything for you, walk you through it, and launch fast — no tech skills needed.
+                    <strong>Launch</strong> typically goes live in under 7 days. <strong>Optimize/Scale</strong> depend on scope – we confirm a clear timeline after discovery. We handle the setup end-to-end.
                   </p>
                 )
               },
@@ -62,7 +61,7 @@ export default function Home() {
                 label: "🔹 Do I need to train the AI myself?",
                 children: (
                   <p>
-                    Nope. You send us your documents, SOPs, or links — we handle the training. You get an AI assistant that already “knows the job.”
+                    No. You share SOPs, docs or links; we ingest and structure them, set guardrails, and test on real scenarios. You review and approve before go-live.
                   </p>
                 )
               },
@@ -70,7 +69,7 @@ export default function Home() {
                 label: "🔹 Is it safe to use for client data?",
                 children: (
                   <p>
-                    Yes. We follow best-in-class security practices and never store data unless you want us to.
+                    Yes. We apply least-privilege access, encrypted connections, and avoid storing data unless required. Wherever possible, data stays in your systems. Audit trails available on request.
                   </p>
                 )
               },
@@ -78,7 +77,7 @@ export default function Home() {
                 label: "🔹 How do I know it’s working?",
                 children: (
                   <p>
-                    We show you results — how much time it's saving, how many tasks it's completing, and we check in with you regularly.
+                    You’ll see clear numbers: tasks completed, hours saved, response times, and pipeline/output metrics. We send periodic summaries and run optimization reviews (priority in Optimize, dedicated in Scale).
                   </p>
                 )
               },
@@ -86,7 +85,7 @@ export default function Home() {
                 label: "🔹 What happens if I need changes later?",
                 children: (
                   <p>
-                    We’ve got you. All plans include updates, tweaks, and support to evolve with your needs.
+                    Included. Small tweaks and improvements are part of every plan. Larger requests are scheduled as fixed mini-sprints or queued for the next cycle – no surprises.
                   </p>
                 )
               },
