@@ -6,10 +6,10 @@ export default function PlanROIText({ plan }) {
       text = "If this doesn’t save you €20/day, your team’s not using it.";
       break;
     case "Optimize":
-      text = "Kill one bottleneck. Unlock €10K/month.";
+      text = "Kill one bottleneck. Unlock €10K+/month.";
       break;
     case "Scale":
-      text = "Your team wastes €5K+/month in chaos. This kills that.";
+      text = "Eliminate operational chaos. Unlock €20K+/month in potential gains.";
       break;
     default:
       return null;
