@@ -50,11 +50,12 @@ export default function StatsSection() {
       {/* CTA Button */}
       <div className="mt-12">
         <a
-          href="/about#results"
-          className="inline-block bg-neonPurple text-white font-semibold px-6 py-3 rounded-full hover:shadow-[0_0_10px_#c084fc] transition"
-        >
-          See how we measure this
-        </a>
+  href="/about#results"
+  className="inline-block bg-neonPurple text-black font-semibold px-6 py-3 rounded-full hover:shadow-[0_0_10px_#c084fc] transition no-underline"
+>
+  See how we measure this
+</a>
+
       </div>
     </section>
   );
