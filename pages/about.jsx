@@ -79,6 +79,66 @@ export default function About() {
               <li>New use cases that save hours per week and improve client experience</li>
             </ul>
 
+            {/* Results & Proof Section */}
+            <section id="results" className="mt-20">
+              <h2 className="text-3xl font-bold mb-4">Results You Can See</h2>
+              <p className="mb-8">
+                We focus on clear indicators where they matter most—time back, workload relief, and business outcomes. Here’s how we measure and report them.
+              </p>
+
+              {/* KPI Row */}
+              <div className="grid md:grid-cols-3 gap-6 mb-4">
+                <div className="p-6 border rounded-lg shadow-sm">
+                  <h3 className="text-xl font-bold">42+ hrs/month back</h3>
+                  <p>Team hours freed across targeted workflows.</p>
+                </div>
+                <div className="p-6 border rounded-lg shadow-sm">
+                  <h3 className="text-xl font-bold">2.4× more deals (same leads)</h3>
+                  <p>Better follow‑through → more wins.</p>
+                </div>
+                <div className="p-6 border rounded-lg shadow-sm">
+                  <h3 className="text-xl font-bold">621% avg. ROI</h3>
+                  <p>€1 in → €6+ out on agreed workflows.</p>
+                </div>
+              </div>
+              <p className="text-sm text-gray-500 mb-8">(These are representative outcomes; actual metrics vary by scope and adoption.)</p>
+
+              {/* How We Measure */}
+              <h3 className="text-2xl font-semibold mb-4">How We Measure</h3>
+              <ul className="list-disc pl-6 mb-8 space-y-1">
+                <li>Time saved: Before/after runs on the same workflows, summed across roles.</li>
+                <li>Throughput & quality: Tasks completed, error rates, rework avoided.</li>
+                <li>Deal impact: Same lead volume, higher conversion and cycle speed.</li>
+                <li>ROI: Cost in (build + run) vs. value out (hours saved × role rate + revenue impact).</li>
+                <li>Visibility: Periodic summaries; optimization reviews to double‑down on what works.</li>
+              </ul>
+
+              {/* Quality Standard */}
+              <div className="bg-gray-100 p-6 rounded-lg mb-8">
+                <h4 className="text-xl font-semibold mb-2">We launch when it’s right.</h4>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Permissions & guardrails configured</li>
+                  <li>Manual + automated tests for key scenarios</li>
+                  <li>Dry run with real data and acceptance checklist</li>
+                </ul>
+              </div>
+
+              {/* Ongoing */}
+              <p className="mb-8">
+                We monitor, resolve issues fast, and ship improvements. Your assistant compounds value over time.
+              </p>
+
+              {/* Optional Secondary Metrics */}
+              <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-700">
+                <div>–60% admin time</div>
+                <div>{'<'} 24h lead follow‑up SLA</div>
+                <div>3.8× revenue in 60 days</div>
+                <div>NPS/CSAT up</div>
+                <div>Error rate down</div>
+                <div>Adoption rate up</div>
+              </div>
+            </section>
+
             {/* Founder Profile with Animation */}
             <div className="fade-in text-center mt-20">
               <h3 className="text-2xl font-semibold mb-6">Let’s Build Smarter Together</h3>
