@@ -11,7 +11,7 @@ export default function FounderQuote() {
         viewport={{ once: true }}
       >
         <span className="block border-l-4 border-neonPurple pl-4 mb-6 text-left">
-          “OmniNex is your second brain — built to think fast, never sleep, and grow with your ambition.”
+          “OmniNex is your second brain - built to think fast, never sleep, and grow with your ambition.”
         </span>
         <footer className="mt-6 text-base not-italic text-gray-500">
           — Nikola Nikolov, CEO of OmniNex
