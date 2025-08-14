@@ -40,7 +40,7 @@ export default function GuideEmbed() {
         transition={{ delay: 0.1, duration: 0.6 }}
         viewport={{ once: true }}
       >
-        A simple, predictable 3‑step process.
+        A simple 3‑step process.
       </motion.p>
 
       <div className="relative max-w-4xl mx-auto">
