@@ -37,7 +37,7 @@ export default function Home() {
                 label: "🔹 What makes OmniNex unique?",
                 children: (
                   <p>
-                    We build assistants around <strong>your exact process</strong> – not templates. Operate by chat when you ask or run on autopilot when you’re busy. Connected to your stack, engineered for reliability and measurable ROI.
+                    We build assistants around <strong>your exact process</strong> - not templates. Operate by chat when you ask or run on autopilot when you’re busy. Connected to your stack, engineered for reliability and measurable ROI.
                   </p>
                 )
               },
@@ -45,7 +45,7 @@ export default function Home() {
                 label: "🔹 What kind of tasks can my assistant handle?",
                 children: (
                   <p>
-                    Repetitive, rules-based work: follow-ups and reminders, meeting summaries and handoffs, lead routing/scoring, report generation, content drafts, invoice/expense processing, data syncs, onboarding sequences – and more.
+                    Repetitive, rules-based work: follow-ups and reminders, meeting summaries and handoffs, lead routing/scoring, report generation, content drafts, invoice/expense processing, data syncs, onboarding sequences – and many more.
                   </p>
                 )
               },
@@ -53,7 +53,7 @@ export default function Home() {
                 label: "🔹 How do you make sure it’s truly ready?",
                 children: (
     <p>
-      We launch when it’s right — not just fast. We stress-test the assistant, fix what breaks, and test again. Only after it passes our QA standard — real-world scenarios, built-in guardrails, and a dry run with your team — do we go live. Quality & stability first, no surprises in production.
+      We launch when it’s right - not just fast. We stress-test the assistant, fix what breaks, and test again. Only after it passes our QA standard - real-world scenarios, built-in guardrails, and a dry run with your team - do we go live. Quality & stability first, no surprises in production.
     </p>
                 )
               },
@@ -77,7 +77,7 @@ export default function Home() {
                 label: "🔹 How do I know it’s working?",
                 children: (
                   <p>
-                    You’ll see clear numbers: tasks completed, hours saved, response times, and pipeline/output metrics. We send periodic summaries and run optimization reviews (priority in Optimize, dedicated in Scale).
+                    You’ll see clear indicators where it matters most—like key tasks completed, hours freed up, and measurable impact on your workflow or pipeline. We provide periodic summaries and review sessions to highlight progress and fine-tune what’s running.
                   </p>
                 )
               },
@@ -85,7 +85,7 @@ export default function Home() {
                 label: "🔹 What happens if I need changes later?",
                 children: (
                   <p>
-                    Included. Small tweaks and improvements are part of every plan. Larger requests are scheduled as fixed mini-sprints or queued for the next cycle – no surprises.
+                    Included. Small tweaks and improvements are part of every plan. Larger requests are scheduled as fixed mini-sprints or queued for the next cycle - no surprises.
                   </p>
                 )
               },
