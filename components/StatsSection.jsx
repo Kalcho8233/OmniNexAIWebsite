@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 
 const stats = [
-  { value: '42+ hrs/month back', label: 'A full work week saved.' },
   { value: '2.4x more deals', label: 'From the same leads.' },
+  { value: '42+ hrs/month back', label: 'A full work week saved.' },
   { value: '621% avg. ROI', label: '€1 in → €6+ out.' }
 ];
 
