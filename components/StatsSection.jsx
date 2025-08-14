@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
 
 const stats = [
-  { value: '42+ hrs / month', label: 'A full work week saved.' },
-  { value: '621% avg. ROI', label: '€1 in → €6+ out.' },
-  { value: '−60% admin time', label: 'Less busywork.' },
-  { value: '2.4x more deals', label: 'From the same leads.' }
+  { value: '42+ hrs/month back', label: 'A full work week saved.' },
+  { value: '2.4x more deals', label: 'From the same leads.' },
+  { value: '621% avg. ROI', label: '€1 in → €6+ out.' }
 ];
 
 const Card = ({ value, label, delay = 0 }) => (
@@ -42,7 +41,7 @@ export default function StatsSection() {
         More time. More energy. More results.
       </motion.p>
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {stats.map((s, i) => (
           <Card key={i} {...s} delay={i * 0.05} />
         ))}
