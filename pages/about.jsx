@@ -82,7 +82,7 @@ export default function About() {
               {[
                 { k: "42+ hrs/month", d: "Team hours saved", icon: <FaCheckCircle className="text-neonPurple" /> },
                 { k: "2.4× more deals", d: "From the same leads", icon: <FaCheckCircle className="text-neonPurple" /> },
-                { k: "621% avg. ROI", d: "€1 in → €6+ out", icon: <FaCheckCircle className="text-neonPurple" /> },
+                { k: "621% avg. ROI", d: "€1 in then €6+ out", icon: <FaCheckCircle className="text-neonPurple" /> },
               ].map((x, i) => (
                 <motion.div
                   key={i}
@@ -166,7 +166,7 @@ export default function About() {
             <div className="text-center mt-10">
               <a
                 href="/#contact"
-                className="inline-block bg-gradient-to-r from-[#B300FF] to-[#FF37B5] text-white font-semibold px-8 py-3 rounded-full hover:shadow-[0_0_18px_#c084fc] transition"
+                className=" bg-gradient-to-r from-[#B300FF] to-[#FF37B5] text-white font-semibold px-8 py-3 rounded-full hover:shadow-[0_0_18px_#c084fc] transition"
               >
                 Let’s Build Smarter Together
               </a>
