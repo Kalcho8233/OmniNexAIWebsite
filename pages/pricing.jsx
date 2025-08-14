@@ -135,7 +135,7 @@ export default function Pricing() {
         <section className="text-center mb-20">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Choose the plan that fits your team</h1>
           <p className="text-lg md:text-xl font-semibold text-neonPurple mb-8">
-            Start saving 10+ hours/week in less than 7 days. Pick your plan.
+            Start saving 10+ hours/week with your custom AI assistant. Pick your plan.
           </p>
           <NeonButton text="Book a Demo" href="https://calendly.com/nikola-nikolov1/ai-assistant-discovery-call" />
         </section>
