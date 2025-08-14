@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
+import GuideEmbed from '../components/GuideEmbed';
 import HowItWorks from '../components/HowItWorks';
 import UseCaseCarousel from '../components/UseCaseCarousel';
 import StatsSection from '../components/StatsSection';
@@ -9,7 +10,6 @@ import FeatureAccordion from '../components/FeatureAccordion';
 import FinalCTA from '../components/FinalCTA';
 import DemoForm from '../components/DemoForm';
 import ContactUs from '../components/ContactUs';
-import GuideEmbed from '../components/GuideEmbed';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -20,19 +20,16 @@ export default function Home() {
         <meta name="description" content="OmniNex builds custom AI assistants to automate, accelerate, and scale your team's workflows." />
       </Head>
 
-      {/* ВАЖНО: основен фон е БЯЛ */}
       <main className="relative bg-white text-black font-sans overflow-x-hidden">
         <Navbar />
         <HeroSection />
-        {/* Timeline секция – преместена веднага след Hero */}
-        <GuideEmbed />
-
+        <GuideEmbed /> {/* Остава само едно копие */}
         <HowItWorks />
         <UseCaseCarousel />
         <StatsSection />
         <FounderQuote />
 
-        {/* FAQ SECTION – бял фон, само accordion с лилав бордер */}
+        {/* FAQ SECTION */}
         <section className="py-16 px-4 md:px-8 max-w-4xl mx-auto my-16">
           <div className="space-y-8">
             {[
@@ -40,7 +37,7 @@ export default function Home() {
                 label: "🔹 What makes OmniNex unique?",
                 children: (
                   <p>
-                    We combine <strong>deep customization</strong> with <strong>plug-and-play speed</strong>. 
+                    We combine <strong>deep customization</strong> with <strong>plug-and-play speed</strong>.
                     Your assistant is trained on your SOPs, deployed in your tools, and takes real-time action — in just days.
                   </p>
                 )
@@ -94,10 +91,7 @@ export default function Home() {
                 )
               },
             ].map((faq, idx) => (
-              <div
-                key={idx}
-                className="px-0" // няма фон, само въздух
-              >
+              <div key={idx} className="px-0">
                 <FeatureAccordion label={faq.label}>{faq.children}</FeatureAccordion>
               </div>
             ))}
@@ -107,7 +101,6 @@ export default function Home() {
         <FinalCTA />
         <DemoForm />
         <ContactUs />
-        {/* Махнат дубликат на <GuideEmbed /> тук */}
         <Footer />
       </main>
     </>
