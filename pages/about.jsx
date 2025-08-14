@@ -36,27 +36,28 @@ export default function About() {
         </div>
 
         {/* HERO */}
-        <section className="px-6 md:px-16 py-20 md:py-28">
-          <div className="max-w-6xl mx-auto text-center">
-            <motion.h1
-              className="text-4xl md:text-6xl font-extrabold tracking-tight"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              Building <span className="text-neonPurple">systems that work</span> -
-              so your team can, too.
-            </motion.h1>
-            <motion.p
-              className="mt-5 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.5 }}
-            >
-              We design custom AI workflow assistants that run your operations via chat or on autopilot. Human-friendly on the surface. Industrial‑grade under the hood.
-            </motion.p>
-          </div>
-        </section>
+<section className="px-6 md:px-16 py-20 md:py-28">
+  <div className="max-w-6xl mx-auto text-center">
+    <motion.h1
+      className="text-4xl md:text-6xl font-extrabold tracking-tight"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      We build <span className="text-neonPurple">custom AI workflow assistants</span> that run your operations — via chat or on autopilot.
+    </motion.h1>
+    <motion.p
+      className="mt-5 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.1, duration: 0.5 }}
+    >
+      Type a task in plain language and it gets done. Or schedule it to run hands-free.
+      From reporting and follow-ups to data syncs and client workflows — your assistant executes reliably and follows your rules.
+    </motion.p>
+  </div>
+</section>
+
 
         {/* OUR STORY */}
         <section className="px-6 md:px-16 py-16 bg-[#fafbff]">
