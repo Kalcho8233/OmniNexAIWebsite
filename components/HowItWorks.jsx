@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaLock, FaCode, FaStar, FaUserCheck } from 'react-icons/fa';
 
-export default function HowItWorks() {
+export default function WhyItWorks() {
   return (
     <section className="py-20 px-6 md:px-20 bg-white">
       <motion.h2
@@ -11,10 +11,10 @@ export default function HowItWorks() {
         transition={{ duration: 0.5, ease: 'easeOut' }}
         viewport={{ once: true }}
       >
-        How It Works
+        Why It Works
       </motion.h2>
 
-      {/* Steps above cards */}
+      {/* Кратко описание вместо стъпки */}
       <motion.div
         className="text-center mb-14"
         initial={{ opacity: 0, y: 10 }}
@@ -23,11 +23,7 @@ export default function HowItWorks() {
         viewport={{ once: true }}
       >
         <p className="text-neonPurple text-lg md:text-2xl font-semibold leading-relaxed max-w-3xl mx-auto">
-          Discovery: Identify your high-impact processes during a quick call or form.<br/>
-          <br/>
-          Build & Demo: We design and connect your custom AI workflow assistant – ready to preview in days.<br/>
-          <br/>
-          Deploy & Support: Your team uses it instantly via chat or on autopilot. No extra software. No disruptions.
+          Built for reliability and adoption – secure access, clear permissions, and an interface your team understands.
         </p>
       </motion.div>
 
@@ -58,8 +54,8 @@ export default function HowItWorks() {
           <div className="mb-4 flex items-center justify-center">
             <FaCode size={36} className="text-neonPurple drop-shadow-[0_0_10px_#BC13FE88]" />
           </div>
-          <h3 className="text-xl font-semibold text-black mb-2 tracking-tight">No code needed</h3>
-          <p className="text-gray-500 text-base">Your assistant is ready to run – we handle the setup, so your team focuses on using it.</p>
+          <h3 className="text-xl font-semibold text-black mb-2 tracking-tight">We handle the setup</h3>
+          <p className="text-gray-500 text-base">We configure and connect everything so your team focuses on using it, not maintaining it.</p>
         </motion.div>
 
         {/* 3 */}
