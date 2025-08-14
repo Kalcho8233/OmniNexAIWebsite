@@ -31,6 +31,7 @@ export default function Home() {
 
         {/* FAQ SECTION */}
         <section className="py-16 px-4 md:px-8 max-w-4xl mx-auto my-16">
+          <h2 className="text-3xl font-bold text-center mb-8">FAQs</h2>
           <div className="space-y-8">
             {[
               {
