@@ -24,6 +24,9 @@ export default function Home() {
       <main className="relative bg-white text-black font-sans overflow-x-hidden">
         <Navbar />
         <HeroSection />
+        {/* Timeline секция – преместена веднага след Hero */}
+        <GuideEmbed />
+
         <HowItWorks />
         <UseCaseCarousel />
         <StatsSection />
@@ -104,7 +107,7 @@ export default function Home() {
         <FinalCTA />
         <DemoForm />
         <ContactUs />
-        <GuideEmbed />
+        {/* Махнат дубликат на <GuideEmbed /> тук */}
         <Footer />
       </main>
     </>
