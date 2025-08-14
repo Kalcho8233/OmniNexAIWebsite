@@ -15,16 +15,28 @@ const plans = [
     text: "text-neonPurple",
     features: [
       {
-        title: " 1 GPT assistant",
-        desc: "Think of it like hiring extra team members — but AI-powered. They work 24/7, follow your rules, and never miss a task."
+        title: " 1–2 automations",
+        desc: "Focused workflows that remove repetitive work fast and prove value quickly."
       },
       {
-        title: " 1–2 workflows",
-        desc: "We automate your boring, manual work. From sending follow-ups to sorting meeting notes — so your team focuses on what really matters."
+        title: " Chat or autopilot",
+        desc: "Type a task when you need it, or let it run on a schedule when you’re busy."
       },
       {
-        title: " 1h onboarding",
-        desc: "We walk you through everything — no tech skills needed. You’ll know exactly how to use your assistant from Day 1."
+        title: " Connects multiple tools",
+        desc: "Works with the tools you already use – no vendor lock-in."
+      },
+      {
+        title: " Onboarding & training",
+        desc: "Clear walkthrough so your team is confident from day one."
+      },
+      {
+        title: " Ongoing improvements",
+        desc: "We refine and extend as your needs evolve."
+      },
+      {
+        title: " Standard support",
+        desc: "Responsive help during business hours."
       }
     ],
     note: "Best for: lean teams getting started",
@@ -37,20 +49,32 @@ const plans = [
     text: "text-neonPurple",
     features: [
       {
-        title: " 2 GPT assistants",
-        desc: "Think of it like hiring extra team members — but AI-powered. They work 24/7, follow your rules, and never miss a task."
+        title: " 3–5 automations",
+        desc: "Multi-process workflows that coordinate across teams and handoffs."
       },
       {
-        title: " 3–5 workflows",
-        desc: "We automate your boring, manual work. From sending follow-ups to sorting meeting notes — so your team focuses on what really matters."
+        title: " Chat + scheduled runs",
+        desc: "Simple chat commands plus monitored, recurring automations."
       },
       {
-        title: " 2h onboarding",
-        desc: "We walk you through everything — no tech skills needed. You’ll know exactly how to use your assistant from Day 1."
+        title: " Smarter coordination",
+        desc: "Links many tools and adds decision logic where needed."
+      },
+      {
+        title: " Custom integrations",
+        desc: "When a required platform isn’t supported out of the box, we can build it."
       },
       {
         title: " Priority support",
-        desc: "You get help fast — no waiting in line, no bots. Real answers, real people, real quick."
+        desc: "Fast responses to keep critical operations running."
+      },
+      {
+        title: " Regular optimization",
+        desc: "Periodic reviews to boost reliability and performance."
+      },
+      {
+        title: " Future improvements",
+        desc: "Built to expand without disrupting your team."
       }
     ],
     note: "For teams ready to systemize & scale",
@@ -63,24 +87,32 @@ const plans = [
     text: "text-neonPurple",
     features: [
       {
-        title: " 3+ GPT assistants",
-        desc: "Think of it like hiring extra team members — but AI-powered. They work 24/7, follow your rules, and never miss a task."
+        title: " 6+ advanced automations",
+        desc: "Complex, cross-department operations with approvals and branching logic."
       },
       {
-        title: " 6+ workflows",
-        desc: "We automate your boring, manual work. From sending follow-ups to sorting meeting notes — so your team focuses on what really matters."
+        title: " Chat, events, autonomous",
+        desc: "Trigger by chat or events – runs fully hands-free at scale."
       },
       {
-        title: " 3h onboarding",
-        desc: "We walk you through everything — no tech skills needed. You’ll know exactly how to use your assistant from Day 1."
+        title: " Robust coordination",
+        desc: "Works across many tools, roles, and compliance requirements."
       },
       {
         title: " Custom integrations",
-        desc: "Already using Slack, Gmail, Notion or HubSpot? We’ll connect your assistant to your tools so it fits right into your workflow."
+        desc: "Connect unique or legacy platforms specific to your business."
       },
       {
         title: " Dedicated support",
-        desc: "One expert from our team stays with you. They know your setup and help you get the most out of your assistant — anytime you need it."
+        desc: "A named specialist who knows your setup end-to-end."
+      },
+      {
+        title: " Proactive monitoring",
+        desc: "Health checks and quarterly enhancement reviews."
+      },
+      {
+        title: " Built for expansion",
+        desc: "Prepared for higher volumes and future initiatives."
       }
     ],
     note: "For growing agencies & enterprises",
@@ -93,7 +125,7 @@ export default function Pricing() {
     <>
       <Head>
         <title>Pricing | OmniNex AI Plans</title>
-        <meta name="description" content="Compare OmniNex pricing plans for custom AI assistants. From lean startup teams to full-scale agency automation – see which plan fits your business." />
+        <meta name="description" content="Compare OmniNex pricing plans for custom AI workflow assistants. From lean startup teams to full-scale operations – see which plan fits your business." />
       </Head>
 
       <Navbar />
@@ -141,7 +173,7 @@ export default function Pricing() {
         {/* Bonus tagline */}
         <section className="text-center mt-12 mb-2">
           <p className="text-xl md:text-2xl italic text-black">
-            Built for teams who don’t want just another tool — but real results.
+            Built for teams who don’t want just another tool – but real results.
           </p>
         </section>
 
