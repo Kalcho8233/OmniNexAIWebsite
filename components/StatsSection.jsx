@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 
 const stats = [
-  { value: 'More\n time.' },
   { value: 'More energy.' },
+  { value: 'More\n  time.' },
   { value: 'More results.' }
 ];
 
