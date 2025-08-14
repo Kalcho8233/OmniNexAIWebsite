@@ -1,4 +1,3 @@
-// components/OurPlans.jsx
 import { motion } from 'framer-motion';
 import NeonButton from './NeonButton';
 
@@ -7,9 +6,12 @@ const plans = [
     name: 'Launch',
     price: '€2,500 setup + €300/month',
     features: [
-      '✅ 1 GPT assistant',
-      '✅ 1–2 workflows',
-      '✅ 1h onboarding'
+      '✅ 1–2 automations – Focused workflows that remove repetitive work fast and prove value quickly.',
+      '✅ Chat or autopilot – Type a task when you need it, or let it run on a schedule when you’re busy.',
+      '✅ Connects multiple tools – Works with the tools you already use; no vendor lock-in.',
+      '✅ Onboarding & training – Clear walkthrough so your team is confident from day one.',
+      '✅ Ongoing improvements – We refine and extend as your needs evolve.',
+      '✅ Standard support – Responsive help during business hours.'
     ],
     highlight: 'Best for: lean teams getting started',
     border: 'border-neonBlue'
@@ -18,10 +20,13 @@ const plans = [
     name: 'Optimize',
     price: '€5,000 setup + €600/month',
     features: [
-      '✅ 2 GPT assistants',
-      '✅ 3–5 workflows',
-      '✅ 2h onboarding',
-      '✅ Priority support'
+      '✅ 3–5 automations – Multi-process workflows that coordinate across teams and handoffs.',
+      '✅ Chat + scheduled runs – Simple chat commands plus monitored, recurring automations.',
+      '✅ Smarter coordination – Links many tools and adds decision logic where needed.',
+      '✅ Custom integrations – When a required platform isn’t supported out of the box, we can build it.',
+      '✅ Priority support – Fast responses to keep critical operations running.',
+      '✅ Regular optimization – Periodic reviews to boost reliability and performance.',
+      '✅ Future improvements – Built to expand without disrupting your team.'
     ],
     highlight: 'For teams ready to systemize & scale',
     border: 'border-neonPurple'
@@ -30,11 +35,13 @@ const plans = [
     name: 'Scale',
     price: '€9,000 setup + €1,200/month',
     features: [
-      '✅ 3+ GPT assistants',
-      '✅ 6+ workflows',
-      '✅ 3h onboarding',
-      '✅ Custom integrations',
-      '✅ Dedicated support'
+      '✅ 6+ advanced automations – Complex, cross-department operations with approvals and branching logic.',
+      '✅ Chat, events, autonomous – Trigger by chat or events; runs fully hands-free at scale.',
+      '✅ Robust coordination – Works across many tools, roles, and compliance requirements.',
+      '✅ Custom integrations – Connect unique or legacy platforms specific to your business.',
+      '✅ Dedicated support – A named specialist who knows your setup end-to-end.',
+      '✅ Proactive monitoring – Health checks and quarterly enhancement reviews.',
+      '✅ Built for expansion – Prepared for higher volumes and future initiatives.'
     ],
     highlight: 'For growing agencies & enterprises',
     border: 'border-neonBlue'
