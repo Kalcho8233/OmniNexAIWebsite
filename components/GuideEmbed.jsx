@@ -6,12 +6,12 @@ const steps = [
   {
     icon: FaSearch,
     title: 'Discover & Plan',
-    desc: 'We map the high-impact processes and define clear outcomes and guardrails.',
+    desc: 'We turn your booring, time-consuming tasks into 1-click workflows and define clear outcomes and approvals.',
   },
   {
     icon: FaCogs,
     title: 'Build & Integrate',
-    desc: 'We design your custom workflow assistant and connect it to your stack.',
+    desc: 'We drop in a custom AI assistant that runs inside your current tools - no new logins, live in days.',
   },
   {
     icon: FaRocket,
