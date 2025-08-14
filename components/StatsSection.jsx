@@ -29,7 +29,7 @@ export default function StatsSection() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        What Happens After You Launch With Us
+        What You Get After You Launch With Us
       </motion.h2>
       <motion.p
         className="text-lg md:text-xl text-gray-700 mb-12"
