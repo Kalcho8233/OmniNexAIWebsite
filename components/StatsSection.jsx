@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 
 const stats = [
-  { value: 'More energy.' },
-  { value: 'More\n   time.' }, // 1 space повече преди 'time'
-  { value: 'More results.' }
+  { value: 'More\n   energy.' }, // добавени 3 spaces за центриране
+  { value: 'More\n    time.' },   // добавени 4 spaces за центриране
+  { value: 'More\n   results.' }  // добавени 3 spaces за центриране
 ];
 
 const Card = ({ value, label, delay = 0 }) => (
@@ -25,7 +25,7 @@ export default function StatsSection() {
   return (
     <section className="py-20 px-6 md:px-12 text-center bg-white rounded-2xl">
       <motion.h2
-        className="text-3xl md:text-5xl font-bold text-black mb-2"
+        className="text-3xl md:text-5xl font-bold text-black mb-10" // по-високо заглавие
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
