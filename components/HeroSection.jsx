@@ -1,4 +1,3 @@
-import NeonButton from './NeonButton';
 import { motion } from 'framer-motion';
 
 export default function HeroSection() {
@@ -30,11 +29,12 @@ export default function HeroSection() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.6, duration: 0.5 }}
       >
-        <NeonButton 
-          text="Book a Free Demo" 
+        <a
           href="#demo"
-          className="px-10 py-4 text-lg md:text-xl font-semibold" // същият размер като бутона в StatsSection
-        />
+          className="inline-block bg-neonPurple text-black font-semibold text-lg md:text-xl px-10 py-4 rounded-full hover:shadow-[0_0_18px_#c084fc] transition no-underline"
+        >
+          Book a Free Demo
+        </a>
       </motion.div>
     </section>
   );
