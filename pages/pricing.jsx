@@ -7,6 +7,8 @@ import FeatureAccordionLite from "../components/FeatureAccordionLite";
 import PlanROIText from "../components/PlanROIText";
 import StripeBuyButton from "../components/StripeBuyButton";
 
+const descCls = "text-[1.02rem] md:text-[1.08rem] font-medium text-gray-800 leading-snug";
+
 const plans = [
   // ==== LAUNCH ====
   {
@@ -15,30 +17,12 @@ const plans = [
     border: "border-neonPurple",
     text: "text-neonPurple",
     features: [
-      {
-        title: "1-2 automations",
-        desc: "Focused workflows that remove repetitive work quickly and prove value fast."
-      },
-      {
-        title: "Chat or autopilot",
-        desc: "Run tasks on demand in chat or on a simple schedule when you’re busy."
-      },
-      {
-        title: "Connects multiple tools",
-        desc: "Works with the stack you already use; no vendor lock-in."
-      },
-      {
-        title: "Onboarding & training",
-        desc: "Clear walkthrough and handover so your team is confident from day one."
-      },
-      {
-        title: "Ongoing improvements",
-        desc: "Light, continuous tweaks as your needs evolve."
-      },
-      {
-        title: "Support",
-        desc: "Standard support during business hours."
-      },
+      { title: "1–2 automations", desc: "Готови workflows, които махат повтарящи се задачи и спестяват време." },
+      { title: "Chat or autopilot", desc: "Пускаш задача в чат или я насрочваме да върви сама в определени моменти." },
+      { title: "Connects multiple tools", desc: "Работи с инструментите, които вече ползвате – без нови логини." },
+      { title: "Onboarding & training", desc: "Кратко въвеждане и ръководство, за да стартирате уверено от ден 1." },
+      { title: "Ongoing improvements", desc: "Леки подобрения при нужда, когато изникнат идеи или промени." },
+      { title: "Support", desc: "Стандартна поддръжка в работно време." },
     ],
     note: "Best for: lean teams getting started",
     stripeButtonId: "buy_btn_1RnMqjQ3alExjY2yBSlLMmH3"
@@ -51,52 +35,16 @@ const plans = [
     border: "border-neonPurple",
     text: "text-neonPurple",
     features: [
-      // основните, но по-подобрени
-      {
-        title: "3-4 automations",
-        desc: "Upgraded reliability and tracking across steps; faster cycle time."
-      },
-      {
-        title: "Chat or autopilot",
-        desc: "On-demand chat actions plus managed schedules with alerts and retries."
-      },
-      {
-        title: "Connects multiple tools",
-        desc: "Deeper connectors and smarter handoffs across your current stack."
-      },
-      {
-        title: "Onboarding & training",
-        desc: "Role-based training, playbooks, and adoption nudges for smooth rollout."
-      },
-      {
-        title: "Ongoing improvements",
-        desc: "Monthly tune-ups based on usage and issues we observe."
-      },
-      {
-        title: "Support",
-        desc: "Priority support with faster response for critical paths."
-      },
-      // нови за Optimize
-      {
-        title: "Scheduled runs",
-        desc: "Monitored recurring automations with status summaries."
-      },
-      {
-        title: "Smarter coordination",
-        desc: "Adds decision logic and cross-team orchestration where needed."
-      },
-      {
-        title: "Custom integrations",
-        desc: "When a required platform isn’t supported, we can build the connector."
-      },
-      {
-        title: "Regular optimization",
-        desc: "Periodic reviews focused on reliability, speed, and friction removal."
-      },
-      {
-        title: "Future improvements",
-        desc: "Prepared to extend without disrupting your team."
-      },
+      // същите основни, но по-подобрени и реалистични за соло изпълнение
+      { title: "3–4 automations", desc: "Повече процеси, по-стабилно изпълнение и видими спестени часове." },
+      { title: "Chat or autopilot", desc: "Същото удобство – чат заявки и лесно насрочване, без сложни аларми." },
+      { title: "Connects multiple tools", desc: "По-добри връзки между инструментите, за по-малко ръчна работа." },
+      { title: "Onboarding & training", desc: "Ролеви инструкции и кратки видео стъпки за екипа." },
+      { title: "Ongoing improvements", desc: "Месечни малки доработки според реалната употреба." },
+      { title: "Support", desc: "Priority support – по-бърз отговор при важни теми." },
+      // добавени, но леки за изпълнение
+      { title: "Smarter coordination", desc: "Прости правила „ако/тогава“, за да минава работата по-умно между екипи." },
+      { title: "Regular check-ins", desc: "Кратък преглед веднъж месечно – какво работи и какво да пипнем." },
     ],
     note: "For teams ready to systemize & scale",
     stripeButtonId: "buy_btn_1RnMxZQ3alExjY2yeUmTAidG"
@@ -109,42 +57,19 @@ const plans = [
     border: "border-neonPurple",
     text: "text-neonPurple",
     features: [
-      // основните – най-силни
-      {
-        title: "4+ automations",
-        desc: "Advanced, multi-department workflows with approvals and branching."
-      },
-      {
-        title: "Chat, events & autonomous",
-        desc: "Triggers from chat, system events, or run fully hands-free at scale."
-      },
-      {
-        title: "Connects multiple tools",
-        desc: "Enterprise-grade integrations across roles and compliance requirements."
-      },
-      {
-        title: "Onboarding & training",
-        desc: "Dedicated enablement and change-management support for adoption."
-      },
-      {
-        title: "Ongoing improvements",
-        desc: "Proactive roadmap, backlog management, and measurable milestones."
-      },
-      {
-        title: "Support",
-        desc: "Dedicated specialist who knows your setup end-to-end."
-      },
-      // включваме и добавените от Optimize
-      { title: "Scheduled runs", desc: "Fully monitored schedules with error handling and reporting." },
-      { title: "Smarter coordination", desc: "Decision trees, SLAs, and cross-team orchestration at scale." },
-      { title: "Custom integrations", desc: "Unique or legacy systems integrated as first-class steps." },
-      { title: "Regular optimization", desc: "Quarterly deep-dives to raise reliability and throughput." },
-      { title: "Future improvements", desc: "Built for expansion without downtime." },
-      // нови, само за Scale
-      { title: "Robust coordination & compliance", desc: "Audit trails, permissions, and guardrails for regulated processes." },
-      { title: "Proactive monitoring", desc: "Health checks, alerting, and incident assistance." },
-      { title: "Built for expansion", desc: "Handles higher volumes, teams, and markets as you grow." },
-      { title: "Enterprise SLAs", desc: "Clear targets for responsiveness and uptime." },
+      // основни, най-силни, но без тежки обещания за мониторинг/SLAs
+      { title: "4+ automations", desc: "По-широко покритие – ключови процеси автоматизирани от край до край." },
+      { title: "Chat, events & autonomous", desc: "Заявки от чат и/или автоматично стартиране при събития – където има смисъл." },
+      { title: "Connects multiple tools", desc: "Интеграции за повече екипи и роли – по-малко „копи-пейст“ между системи." },
+      { title: "Onboarding & training", desc: "Работилници за всички звена, за да стане част от ежедневието." },
+      { title: "Ongoing improvements", desc: "План за малки, но постоянни подобрения през цялата година." },
+      { title: "Support", desc: "Dedicated support – един човек, който познава твоята среда." },
+      // наследени от Optimize
+      { title: "Smarter coordination", desc: "По-богати правила между екипи и системи при нужда." },
+      { title: "Regular check-ins", desc: "Двумесечни прегледи с конкретни малки задачи за подобрение." },
+      // само за Scale – но без тежки задължения
+      { title: "Built for expansion", desc: "Подготвено за повече обем и нови процеси, когато сте готови." },
+      { title: "Governance & access", desc: "Ясни роли и достъпи, за да има ред при растеж." },
     ],
     note: "For growing agencies & enterprises",
     stripeButtonId: "buy_btn_1RnMytQ3alExjY2ymqk2cAnN"
@@ -206,7 +131,7 @@ export default function Pricing() {
                     <FeatureAccordionLite
                       key={j}
                       title={<span className="font-semibold">{f.title}</span>}
-                      description={<span>{f.desc}</span>}
+                      description={<span className={descCls}>{f.desc}</span>}
                     />
                   ))}
                 </div>
