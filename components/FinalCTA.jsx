@@ -5,13 +5,13 @@ export default function FinalCTA() {
   return (
     <section className="py-20 text-center px-6 md:px-12 bg-white">
       <motion.h2
-        className="text-4xl md:text-5xl font-bold text-neonPurple mb-6"
+        className="text-4xl md:text-5xl font-bold mb-6"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Build your AI dream team.
+        Build your <span className="text-black">AI dream team.</span>
       </motion.h2>
 
       <motion.p
@@ -21,7 +21,9 @@ export default function FinalCTA() {
         transition={{ delay: 0.2, duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Turn chaos into scale - AI assistants that remember everything, work 24/7, and never drop the ball.
+        Turn <strong>chaos</strong> into <strong>scale</strong> – AI assistants that 
+        <strong> remember everything</strong>, <strong>work 24/7</strong>, and 
+        <strong> never drop the ball</strong>.
       </motion.p>
 
       <motion.div
@@ -30,7 +32,11 @@ export default function FinalCTA() {
         transition={{ delay: 0.4, duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <NeonButton text="Get Started" href="https://calendly.com/nikola-nikolov1/ai-assistant-discovery-call" />
+        <NeonButton
+          text="Get Started"
+          href="https://calendly.com/nikola-nikolov1/ai-assistant-discovery-call"
+          className="px-10 py-4 text-lg md:text-xl font-semibold"
+        />
       </motion.div>
     </section>
   );
