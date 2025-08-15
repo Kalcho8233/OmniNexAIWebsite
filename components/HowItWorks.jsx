@@ -23,7 +23,7 @@ export default function WhyItWorks() {
         viewport={{ once: true }}
       >
         <p className="text-neonPurple text-lg md:text-2xl font-semibold leading-relaxed max-w-3xl mx-auto">
-          Built for reliability and adoption – secure access, clear permissions, and an interface your team understands.
+          Built for reliability and adoption - secure access, clear permissions, and an interface your team understands.
         </p>
       </motion.div>
 
@@ -85,7 +85,7 @@ export default function WhyItWorks() {
             <FaUserCheck size={36} className="text-neonPurple drop-shadow-[0_0_10px_#BC13FE88]" />
           </div>
           <h3 className="text-xl font-semibold text-black mb-2 tracking-tight">Simple to use</h3>
-          <p className="text-gray-500 text-base">Trigger it in chat or let it run automatically – whichever fits your workflow.</p>
+          <p className="text-gray-500 text-base">Trigger it in chat or let it run automatically - whichever fits your workflow.</p>
         </motion.div>
       </div>
     </section>
