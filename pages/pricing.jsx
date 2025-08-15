@@ -18,7 +18,7 @@ const plans = [
         title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">1–2 automations</span>,
         desc: (
           <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
-            Focused <strong>workflows</strong> that remove repetitive work fast and prove value quickly.
+            Focused workflows that remove repetitive work fast and prove value quickly.
           </span>
         )
       },
@@ -26,7 +26,7 @@ const plans = [
         title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Chat or autopilot</span>,
         desc: (
           <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
-            Type a task when you need it, or let it run on a <strong>schedule</strong> when you’re busy.
+            Type a task when you need it, or let it run on a schedule when you’re busy.
           </span>
         )
       },
@@ -34,7 +34,7 @@ const plans = [
         title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Connects multiple tools</span>,
         desc: (
           <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
-            Works with the tools you already use – no <strong>vendor lock-in</strong>.
+            Works with the tools you already use – no vendor lock-in.
           </span>
         )
       },
@@ -63,7 +63,7 @@ const plans = [
         )
       }
     ],
-    note: <span className="text-[0.95rem] font-medium text-gray-700 italic">Best for: lean teams getting started</span>,
+    note: <span className="text-sm text-gray-500 font-normal">{`Best for: lean teams getting started`}</span>,
     stripeButtonId: "buy_btn_1RnMqjQ3alExjY2yBSlLMmH3"
   },
   {
@@ -76,7 +76,7 @@ const plans = [
         title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">3–5 automations</span>,
         desc: (
           <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
-            Multi-process <strong>workflows</strong> that coordinate across teams and handoffs.
+            Multi-process workflows that coordinate across teams and handoffs.
           </span>
         )
       },
@@ -84,7 +84,7 @@ const plans = [
         title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Chat + scheduled runs</span>,
         desc: (
           <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
-            Simple chat commands plus monitored, <strong>recurring automations</strong>.
+            Simple chat commands plus monitored, recurring automations.
           </span>
         )
       },
@@ -92,7 +92,7 @@ const plans = [
         title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Smarter coordination</span>,
         desc: (
           <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
-            Links many tools and adds <strong>decision logic</strong> where needed.
+            Links many tools and adds decision logic where needed.
           </span>
         )
       },
@@ -100,7 +100,7 @@ const plans = [
         title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Custom integrations</span>,
         desc: (
           <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
-            When a required platform isn’t supported out of the box, we can <strong>build it</strong>.
+            When a required platform isn’t supported out of the box, we can build it.
           </span>
         )
       },
@@ -108,7 +108,7 @@ const plans = [
         title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Priority support</span>,
         desc: (
           <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
-            <strong>Fast responses</strong> to keep critical operations running.
+            Fast responses to keep critical operations running.
           </span>
         )
       },
@@ -116,7 +116,7 @@ const plans = [
         title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Regular optimization</span>,
         desc: (
           <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
-            Periodic reviews to boost <strong>reliability</strong> and performance.
+            Periodic reviews to boost reliability and performance.
           </span>
         )
       },
@@ -129,7 +129,7 @@ const plans = [
         )
       }
     ],
-    note: <span className="text-[0.95rem] font-medium text-gray-700 italic">For teams ready to systemize & scale</span>,
+    note: <span className="text-sm text-gray-500 font-normal">{`For teams ready to systemize & scale`}</span>,
     stripeButtonId: "buy_btn_1RnMxZQ3alExjY2yeUmTAidG"
   },
   {
@@ -150,7 +150,7 @@ const plans = [
         title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Chat, events, autonomous</span>,
         desc: (
           <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
-            Trigger by chat or events – runs fully <strong>hands-free at scale</strong>.
+            Trigger by chat or events – runs fully hands-free at scale.
           </span>
         )
       },
@@ -195,7 +195,7 @@ const plans = [
         )
       }
     ],
-    note: <span className="text-[0.95rem] font-medium text-gray-700 italic">For growing agencies & enterprises</span>,
+    note: <span className="text-sm text-gray-500 font-normal">{`For growing agencies & enterprises`}</span>,
     stripeButtonId: "buy_btn_1RnMytQ3alExjY2ymqk2cAnN"
   }
 ];
@@ -258,11 +258,11 @@ export default function Pricing() {
                   ))}
                 </div>
 
-                {/* Note - a bit more visible */}
-                <p className="mb-4">{plan.note}</p>
+                {/* Note — subtle, no hover emphasis */}
+                <p className="mb-4 text-sm text-gray-500 font-normal select-none">{plan.note}</p>
               </div>
 
-              {/* Buy (kept aligned/unchanged layout-wise) */}
+              {/* Buy (aligned) */}
               <div className="mt-auto">
                 <StripeBuyButton buyButtonId={plan.stripeButtonId} />
               </div>
@@ -270,7 +270,7 @@ export default function Pricing() {
           ))}
         </section>
 
-        {/* Bonus tagline (more noticeable + bold key words) */}
+        {/* Bonus tagline */}
         <section className="text-center mt-14 mb-2">
           <p className="text-2xl md:text-3xl text-black">
             Built for teams who don’t want just another tool - but <strong>real results</strong>.
