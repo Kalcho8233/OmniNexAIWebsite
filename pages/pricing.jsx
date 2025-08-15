@@ -17,12 +17,12 @@ const plans = [
     border: "border-neonPurple",
     text: "text-neonPurple",
     features: [
-      { title: "1–2 automations", desc: "Готови workflows, които махат повтарящи се задачи и спестяват време." },
-      { title: "Chat or autopilot", desc: "Пускаш задача в чат или я насрочваме да върви сама в определени моменти." },
-      { title: "Connects multiple tools", desc: "Работи с инструментите, които вече ползвате – без нови логини." },
-      { title: "Onboarding & training", desc: "Кратко въвеждане и ръководство, за да стартирате уверено от ден 1." },
-      { title: "Ongoing improvements", desc: "Леки подобрения при нужда, когато изникнат идеи или промени." },
-      { title: "Support", desc: "Стандартна поддръжка в работно време." },
+      { title: "1–2 automations", desc: "Simple workflows that remove repetitive tasks and save hours each week." },
+      { title: "Chat or autopilot", desc: "Send a quick chat command or let tasks run automatically on a schedule." },
+      { title: "Connects multiple tools", desc: "Works with the tools you already use – no extra logins needed." },
+      { title: "Onboarding & training", desc: "Step-by-step guidance so you’re confident from day one." },
+      { title: "Ongoing improvements", desc: "Small updates as your needs change over time." },
+      { title: "Support", desc: "Standard help during business hours." },
     ],
     note: "Best for: lean teams getting started",
     stripeButtonId: "buy_btn_1RnMqjQ3alExjY2yBSlLMmH3"
@@ -35,16 +35,14 @@ const plans = [
     border: "border-neonPurple",
     text: "text-neonPurple",
     features: [
-      // същите основни, но по-подобрени и реалистични за соло изпълнение
-      { title: "3–4 automations", desc: "Повече процеси, по-стабилно изпълнение и видими спестени часове." },
-      { title: "Chat or autopilot", desc: "Същото удобство – чат заявки и лесно насрочване, без сложни аларми." },
-      { title: "Connects multiple tools", desc: "По-добри връзки между инструментите, за по-малко ръчна работа." },
-      { title: "Onboarding & training", desc: "Ролеви инструкции и кратки видео стъпки за екипа." },
-      { title: "Ongoing improvements", desc: "Месечни малки доработки според реалната употреба." },
-      { title: "Support", desc: "Priority support – по-бърз отговор при важни теми." },
-      // добавени, но леки за изпълнение
-      { title: "Smarter coordination", desc: "Прости правила „ако/тогава“, за да минава работата по-умно между екипи." },
-      { title: "Regular check-ins", desc: "Кратък преглед веднъж месечно – какво работи и какво да пипнем." },
+      { title: "3–4 automations", desc: "Covers more processes with faster and more reliable performance." },
+      { title: "Chat or autopilot", desc: "Same convenience as Launch, with smarter scheduling options." },
+      { title: "Connects multiple tools", desc: "Better integrations for smoother work between apps." },
+      { title: "Onboarding & training", desc: "Extra guidance with role-specific instructions and short videos." },
+      { title: "Ongoing improvements", desc: "Monthly adjustments to keep workflows running at their best." },
+      { title: "Support", desc: "Priority help with faster response times." },
+      { title: "Smarter coordination", desc: "Simple ‘if/then’ rules to pass tasks between teams automatically." },
+      { title: "Regular check-ins", desc: "Quick monthly review to spot and apply improvements." },
     ],
     note: "For teams ready to systemize & scale",
     stripeButtonId: "buy_btn_1RnMxZQ3alExjY2yeUmTAidG"
@@ -57,24 +55,22 @@ const plans = [
     border: "border-neonPurple",
     text: "text-neonPurple",
     features: [
-      // основни, най-силни, но без тежки обещания за мониторинг/SLAs
-      { title: "4+ automations", desc: "По-широко покритие – ключови процеси автоматизирани от край до край." },
-      { title: "Chat, events & autonomous", desc: "Заявки от чат и/или автоматично стартиране при събития – където има смисъл." },
-      { title: "Connects multiple tools", desc: "Интеграции за повече екипи и роли – по-малко „копи-пейст“ между системи." },
-      { title: "Onboarding & training", desc: "Работилници за всички звена, за да стане част от ежедневието." },
-      { title: "Ongoing improvements", desc: "План за малки, но постоянни подобрения през цялата година." },
-      { title: "Support", desc: "Dedicated support – един човек, който познава твоята среда." },
-      // наследени от Optimize
-      { title: "Smarter coordination", desc: "По-богати правила между екипи и системи при нужда." },
-      { title: "Regular check-ins", desc: "Двумесечни прегледи с конкретни малки задачи за подобрение." },
-      // само за Scale – но без тежки задължения
-      { title: "Built for expansion", desc: "Подготвено за повече обем и нови процеси, когато сте готови." },
-      { title: "Governance & access", desc: "Ясни роли и достъпи, за да има ред при растеж." },
+      { title: "4+ automations", desc: "Key processes fully automated across multiple teams." },
+      { title: "Chat, events & autonomous", desc: "Trigger tasks from chat, events, or let them run hands-free." },
+      { title: "Connects multiple tools", desc: "Integrations across departments to cut down on manual work." },
+      { title: "Onboarding & training", desc: "Full team workshops to make automation part of daily work." },
+      { title: "Ongoing improvements", desc: "A yearly plan for steady upgrades and refinements." },
+      { title: "Support", desc: "A dedicated contact who knows your setup inside out." },
+      { title: "Smarter coordination", desc: "Advanced rules and routing between teams and tools." },
+      { title: "Regular check-ins", desc: "Reviews every two months with clear action steps." },
+      { title: "Built for expansion", desc: "Ready for higher volumes and new processes as you grow." },
+      { title: "Governance & access", desc: "Clear roles and permissions for smooth scaling." },
     ],
     note: "For growing agencies & enterprises",
     stripeButtonId: "buy_btn_1RnMytQ3alExjY2ymqk2cAnN"
   }
 ];
+
 
 export default function Pricing() {
   return (
