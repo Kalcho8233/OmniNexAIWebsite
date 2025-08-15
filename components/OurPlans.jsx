@@ -76,10 +76,10 @@ export default function OurPlans() {
               ))}
             </ul>
 
-            {/* Note a bit more visible */}
-            <p className="text-[0.95rem] text-gray-700 italic mb-4 font-medium">{plan.highlight}</p>
+            {/* Note — no highlight (subtle, non-italic, smaller) */}
+            <p className="text-sm text-gray-500 mb-4">{plan.highlight}</p>
 
-            {/* Button—same large sizing you specified */}
+            {/* Button — large sizing as requested */}
             <a
               href="https://calendly.com/nikola-nikolov1/ai-assistant-discovery-call"
               className="inline-block bg-neonPurple text-black font-semibold text-lg md:text-xl px-10 py-4 rounded-full hover:shadow-[0_0_18px_#c084fc] transition no-underline"
