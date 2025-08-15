@@ -1,15 +1,28 @@
 export default function PlanROIText({ plan }) {
-  let text = "";
+  let line;
 
+  // Make the ROI/benefit line a bit bigger, with bolded key terms
   switch (plan) {
     case "Launch":
-      text = "If this doesn’t save you €20/day, your team’s not using it.";
+      line = (
+        <>
+          If this doesn’t save you <strong>€20/day</strong>, your team’s not using it.
+        </>
+      );
       break;
     case "Optimize":
-      text = "Kill one bottleneck. Unlock €10K+/month.";
+      line = (
+        <>
+          Kill one bottleneck. Unlock <strong>€10K+/month</strong>.
+        </>
+      );
       break;
     case "Scale":
-      text = "Eliminate operational chaos. Unlock €20K+/month in potential gains.";
+      line = (
+        <>
+          Eliminate operational chaos. Unlock <strong>€20K+/month</strong> in potential gains.
+        </>
+      );
       break;
     default:
       return null;
@@ -17,9 +30,15 @@ export default function PlanROIText({ plan }) {
 
   return (
     <div className="mb-3">
-      <p className="italic text-gray-500 text-[14px] mb-[10px]">{text}</p>
-      <div className="h-[1.5px] bg-[#D100FF] my-[5px]" />
-      <p className="font-bold text-[#111] text-[1.1rem] mb-[8px]">Here’s what you get:</p>
+      {/* a touch larger + more space before the divider */}
+      <p className="italic text-gray-700 text-[0.98rem] md:text-[1.05rem] mb-3 leading-snug">
+        {line}
+      </p>
+
+      <div className="h-[1.5px] bg-[#D100FF] my-[6px]" />
+
+      {/* “Here’s what you get” left as-is but slightly larger */}
+      <p className="font-bold text-[#111] text-[1.15rem] mt-2">Here’s what you get:</p>
     </div>
   );
 }
