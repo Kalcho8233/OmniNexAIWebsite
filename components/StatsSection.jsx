@@ -5,7 +5,7 @@ import { FaBolt, FaClock, FaTrophy } from "react-icons/fa";
 const items = [
   { line1: "More", line2: "energy.", icon: FaBolt },
   { line1: "More", line2: "time.",   icon: FaClock },
-  { line1: "More", line2: "results.",icon: FaTrophy },
+  { line1: "More", line2: "results.", icon: FaTrophy },
 ];
 
 function HoloPanel({ line1, line2, Icon, delay = 0 }) {
@@ -17,12 +17,11 @@ function HoloPanel({ line1, line2, Icon, delay = 0 }) {
 
   const onMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;  // -0.5..0.5
-    const y = (e.clientY - rect.top) / rect.height - 0.5; // -0.5..0.5
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
     mvX.set(x);
     mvY.set(y);
   };
-
   const onLeave = () => {
     mvX.set(0);
     mvY.set(0);
@@ -37,33 +36,39 @@ function HoloPanel({ line1, line2, Icon, delay = 0 }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay }}
       viewport={{ once: true }}
+      // използваме whileHover за да пускаме/спираме ефектите моментално
+      whileHover="hover"
       className="relative group"
     >
-      {/* aurora glow зад панела */}
+      {/* Aurora glow – ПРИ hover само */}
       <motion.div
-        className="absolute inset-0 -z-10 blur-2xl rounded-3xl opacity-30
+        className="absolute inset-0 -z-10 blur-2xl rounded-3xl
                    bg-[conic-gradient(at_20%_20%,#B300FF,45%,#7C3AED,70%,#00E5FF,100%,#B300FF)]"
-        animate={{ opacity: [0.22, 0.36, 0.22] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        initial={{ opacity: 0 }}
+        variants={{ hover: { opacity: 0.36 } }}
+        transition={{ duration: 0.18, ease: "easeOut" }}
       />
 
-      {/* рамка с градиент + shimmer overlay */}
+      {/* Неонова рамка */}
       <div className="relative p-[2px] rounded-3xl bg-[linear-gradient(115deg,#B300FF,#7C3AED,#00E5FF)]">
-        <div className="rounded-3xl bg-white px-10 py-14 text-center overflow-hidden">
-          {/* Shimmer sweep */}
+        <div className="relative rounded-3xl bg-white px-10 py-14 text-center overflow-hidden">
+          {/* Shimmer – само докато е hover, после спира веднага */}
           <motion.span
             className="pointer-events-none absolute -left-1/3 top-0 h-full w-1/3
                        bg-gradient-to-r from-transparent via-white/50 to-transparent
                        rotate-12"
-            initial={{ x: "-120%" }}
-            whileHover={{ x: "160%" }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
+            initial={{ x: "-140%", opacity: 0 }}
+            variants={{ hover: { x: "140%", opacity: 1 } }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
           />
-          {/* Съдържание */}
+
+          {/* Икона */}
           <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full
                           bg-neonPurple/10 text-neonPurple">
             <Icon size={18} />
           </div>
+
+          {/* Текст */}
           <div className="text-neonPurple text-3xl md:text-4xl font-extrabold leading-tight select-none">
             <span className="block">{line1}</span>
             <span className="block">{line2}</span>
@@ -93,7 +98,6 @@ export default function StatsSection() {
         ))}
       </div>
 
-      {/* CTA – увеличен, както поиска */}
       <div className="mt-12">
         <a
           href="/about#results"
