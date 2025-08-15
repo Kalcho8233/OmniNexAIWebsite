@@ -1,78 +1,76 @@
 // components/StatsSection.jsx
-import { motion, useAnimation } from 'framer-motion';
-import { FaBolt, FaClock, FaTrophy } from 'react-icons/fa';
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { FaBolt, FaClock, FaTrophy } from "react-icons/fa";
 
 const items = [
-  { t1: 'More', t2: 'energy.', icon: <FaBolt /> },
-  { t1: 'More', t2: 'time.',   icon: <FaClock /> },
-  { t1: 'More', t2: 'results.',icon: <FaTrophy /> },
+  { line1: "More", line2: "energy.", icon: FaBolt },
+  { line1: "More", line2: "time.",   icon: FaClock },
+  { line1: "More", line2: "results.",icon: FaTrophy },
 ];
 
-function OrbitCapsule({ t1, t2, icon, delay = 0 }) {
-  const orbit = useAnimation();
+function HoloPanel({ line1, line2, Icon, delay = 0 }) {
+  // 3D tilt
+  const mvX = useMotionValue(0);
+  const mvY = useMotionValue(0);
+  const rx = useSpring(useTransform(mvY, [-0.5, 0.5], [8, -8]), { stiffness: 120, damping: 12 });
+  const ry = useSpring(useTransform(mvX, [-0.5, 0.5], [-12, 12]), { stiffness: 120, damping: 12 });
 
-  const startSlow = () =>
-    orbit.start({
-      rotate: 360,
-      transition: { repeat: Infinity, ease: 'linear', duration: 12 },
-    });
+  const onMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;  // -0.5..0.5
+    const y = (e.clientY - rect.top) / rect.height - 0.5; // -0.5..0.5
+    mvX.set(x);
+    mvY.set(y);
+  };
 
-  const startFast = () =>
-    orbit.start({
-      rotate: 360,
-      transition: { repeat: Infinity, ease: 'linear', duration: 6 },
-    });
+  const onLeave = () => {
+    mvX.set(0);
+    mvY.set(0);
+  };
 
   return (
-    <div
-      className="relative"
-      style={{ perspective: 1000 }}
-      onMouseEnter={startFast}
-      onMouseLeave={startSlow}
-      onFocus={startFast}
-      onBlur={startSlow}
+    <motion.div
+      onMouseMove={onMove}
+      onMouseLeave={onLeave}
+      style={{ rotateX: rx, rotateY: ry }}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay }}
+      viewport={{ once: true }}
+      className="relative group"
     >
-      {/* орбитален ринг + икона */}
-      <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-24 h-24 pointer-events-none">
-        {/* орбитален ринг (лекият градиент) */}
-        <div className="absolute inset-0 rounded-full border border-transparent [background:linear-gradient(115deg,#B300FF,#7C3AED,#00E5FF)_padding-box,linear-gradient(115deg,#B300FF,#7C3AED,#00E5FF)_border-box] bg-clip-padding [mask:linear-gradient(#000,#000)_content-box,linear-gradient(#000,#000)] [mask-composite:exclude] opacity-60" />
-        {/* въртящ се контейнер */}
-        <motion.div
-          className="absolute inset-0"
-          initial={{ rotate: 0 }}
-          animate={orbit}
-        >
-          {/* иконата стои вляво; контейнерът се върти = орбита */}
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white shadow-[0_0_18px_rgba(188,19,254,0.5)] flex items-center justify-center text-neonPurple">
-            <span className="text-sm">{icon}</span>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* капсулата */}
+      {/* aurora glow зад панела */}
       <motion.div
-        initial={{ opacity: 0, y: 20, rotateX: 0, rotateY: 0 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        whileHover={{ y: -10, scale: 1.02, rotateX: 3, rotateY: -3 }}
-        transition={{ duration: 0.6, delay }}
-        viewport={{ once: true }}
-        className="relative p-[2px] rounded-3xl bg-[linear-gradient(115deg,#B300FF,#7C3AED,#00E5FF)]"
-      >
-        <div className="rounded-3xl bg-white px-10 py-14 text-center">
-          <div className="text-neonPurple text-3xl md:text-4xl font-extrabold leading-tight">
-            <span className="block">{t1}</span>
-            <span className="block">{t2}</span>
+        className="absolute inset-0 -z-10 blur-2xl rounded-3xl opacity-30
+                   bg-[conic-gradient(at_20%_20%,#B300FF,45%,#7C3AED,70%,#00E5FF,100%,#B300FF)]"
+        animate={{ opacity: [0.22, 0.36, 0.22] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      {/* рамка с градиент + shimmer overlay */}
+      <div className="relative p-[2px] rounded-3xl bg-[linear-gradient(115deg,#B300FF,#7C3AED,#00E5FF)]">
+        <div className="rounded-3xl bg-white px-10 py-14 text-center overflow-hidden">
+          {/* Shimmer sweep */}
+          <motion.span
+            className="pointer-events-none absolute -left-1/3 top-0 h-full w-1/3
+                       bg-gradient-to-r from-transparent via-white/50 to-transparent
+                       rotate-12"
+            initial={{ x: "-120%" }}
+            whileHover={{ x: "160%" }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+          />
+          {/* Съдържание */}
+          <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full
+                          bg-neonPurple/10 text-neonPurple">
+            <Icon size={18} />
+          </div>
+          <div className="text-neonPurple text-3xl md:text-4xl font-extrabold leading-tight select-none">
+            <span className="block">{line1}</span>
+            <span className="block">{line2}</span>
           </div>
         </div>
-
-        {/* мек неонов “glow” зад капсулата */}
-        <motion.div
-          className="absolute inset-0 rounded-3xl -z-10 blur-2xl opacity-30 bg-[linear-gradient(115deg,#B300FF,#7C3AED,#00E5FF)]"
-          animate={{ opacity: [0.25, 0.4, 0.25] }}
-          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-        />
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 }
 
@@ -81,7 +79,7 @@ export default function StatsSection() {
     <section className="py-20 px-6 md:px-12 text-center bg-white">
       <motion.h2
         className="text-3xl md:text-5xl font-bold text-black mb-10"
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 18 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
@@ -89,13 +87,13 @@ export default function StatsSection() {
         What You Get After You Launch With Us
       </motion.h2>
 
-      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         {items.map((it, i) => (
-          <OrbitCapsule key={i} {...it} delay={i * 0.06} />
+          <HoloPanel key={i} line1={it.line1} line2={it.line2} Icon={it.icon} delay={i * 0.08} />
         ))}
       </div>
 
-      {/* CTA – твоят по-голям стил */}
+      {/* CTA – увеличен, както поиска */}
       <div className="mt-12">
         <a
           href="/about#results"
