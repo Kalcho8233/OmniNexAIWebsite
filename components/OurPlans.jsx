@@ -6,12 +6,12 @@ const plans = [
     name: 'Launch',
     price: '€2,500 setup + €300/month',
     features: [
-      '✅ 1–2 automations — премахват повтарящи се задачи.',
-      '✅ Chat or autopilot — пускаш в чат или по график.',
-      '✅ Connects multiple tools — работи с текущия ви стек.',
-      '✅ Onboarding & training — кратко въвеждане и ръководства.',
-      '✅ Ongoing improvements — дребни подобрения при нужда.',
-      '✅ Support — стандартна поддръжка в работно време.'
+      '✅ 1–2 automations — Simple workflows that remove repetitive tasks and save hours each week.',
+      '✅ Chat or autopilot — Send a quick chat command or let tasks run on a set schedule.',
+      '✅ Connects multiple tools — Works with the tools you already use, no extra logins.',
+      '✅ Onboarding & training — Step-by-step guidance so you’re confident from day one.',
+      '✅ Ongoing improvements — Small tweaks and updates as your needs change.',
+      '✅ Support — Standard help during business hours.'
     ],
     highlight: 'Best for: lean teams getting started',
     border: 'border-neonBlue'
@@ -20,15 +20,14 @@ const plans = [
     name: 'Optimize',
     price: '€5,000 setup + €600/month',
     features: [
-      '✅ 3–4 automations — по-стабилно и по-бързо изпълнение.',
-      '✅ Chat or autopilot — заявки в чат и лесно насрочване.',
-      '✅ Connects multiple tools — по-добри връзки между системите.',
-      '✅ Onboarding & training — ролеви инструкции и кратки видеа.',
-      '✅ Ongoing improvements — месечни леки доработки.',
-      '✅ Support — priority отговор при важни теми.',
-      // леки добавки
-      '✅ Smarter coordination — прости правила между екипи/инструменти.',
-      '✅ Regular check-ins — кратък преглед веднъж месечно.'
+      '✅ 3–4 automations — Covers more processes with faster, more reliable results.',
+      '✅ Chat or autopilot — Same convenience as Launch, with smarter scheduling options.',
+      '✅ Connects multiple tools — Improved integrations for smoother work between apps.',
+      '✅ Onboarding & training — Extra guidance, role-based instructions, and short video tips.',
+      '✅ Ongoing improvements — Monthly adjustments to keep workflows running at their best.',
+      '✅ Support — Priority help with faster response times.',
+      '✅ Smarter coordination — Simple “if/then” rules to move tasks between teams automatically.',
+      '✅ Regular check-ins — Quick monthly review to spot opportunities for improvement.'
     ],
     highlight: 'For teams ready to systemize & scale',
     border: 'border-neonPurple'
@@ -37,18 +36,16 @@ const plans = [
     name: 'Scale',
     price: '€9,000 setup + €1,200/month',
     features: [
-      '✅ 4+ automations — по-широко покритие на ключови процеси.',
-      '✅ Chat, events & autonomous — автоматично стартиране където има смисъл.',
-      '✅ Connects multiple tools — интеграции за повече екипи и роли.',
-      '✅ Onboarding & training — работилници за всички звена.',
-      '✅ Ongoing improvements — годишен план за малки, постоянни подобрения.',
-      '✅ Support — dedicated контакт, който познава средата ви.',
-      // наследени от Optimize
-      '✅ Smarter coordination — по-богати правила при нужда.',
-      '✅ Regular check-ins — преглед на всеки два месеца.',
-      // само за Scale
-      '✅ Built for expansion — готово за повече обем и нови процеси.',
-      '✅ Governance & access — ясни роли и достъпи при растеж.'
+      '✅ 4+ automations — Key processes fully automated across multiple teams.',
+      '✅ Chat, events & autonomous — Trigger tasks from chat, events, or let them run hands-free.',
+      '✅ Connects multiple tools — More integrations across departments with less manual work.',
+      '✅ Onboarding & training — Team-wide workshops to make automation part of daily work.',
+      '✅ Ongoing improvements — A full-year plan for steady upgrades and refinements.',
+      '✅ Support — A dedicated contact who knows your setup inside out.',
+      '✅ Smarter coordination — More advanced rules and routing between teams and tools.',
+      '✅ Regular check-ins — Reviews every two months with clear action steps.',
+      '✅ Built for expansion — Ready to handle more volume and new processes as you grow.',
+      '✅ Governance & access — Clear roles and permissions for a smooth scale-up.'
     ],
     highlight: 'For growing agencies & enterprises',
     border: 'border-neonBlue'
