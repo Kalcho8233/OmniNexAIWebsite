@@ -6,12 +6,12 @@ const plans = [
     name: 'Launch',
     price: '€2,500 setup + €300/month',
     features: [
-      '✅ 1-2 automations — removes repetitive work quickly.',
-      '✅ Chat or autopilot — run on demand or on a simple schedule.',
-      '✅ Connects multiple tools — works with your current stack.',
-      '✅ Onboarding & training — clear walkthrough for fast adoption.',
-      '✅ Ongoing improvements — light tweaks as needs evolve.',
-      '✅ Support — standard during business hours.'
+      '✅ 1–2 automations — премахват повтарящи се задачи.',
+      '✅ Chat or autopilot — пускаш в чат или по график.',
+      '✅ Connects multiple tools — работи с текущия ви стек.',
+      '✅ Onboarding & training — кратко въвеждане и ръководства.',
+      '✅ Ongoing improvements — дребни подобрения при нужда.',
+      '✅ Support — стандартна поддръжка в работно време.'
     ],
     highlight: 'Best for: lean teams getting started',
     border: 'border-neonBlue'
@@ -20,18 +20,15 @@ const plans = [
     name: 'Optimize',
     price: '€5,000 setup + €600/month',
     features: [
-      '✅ 3-4 automations — upgraded reliability and tracking.',
-      '✅ Chat or autopilot — managed schedules, alerts, retries.',
-      '✅ Connects multiple tools — deeper connectors and handoffs.',
-      '✅ Onboarding & training — role-based playbooks and nudges.',
-      '✅ Ongoing improvements — monthly tune-ups from usage data.',
-      '✅ Support — priority with faster response.',
-      // нови
-      '✅ Scheduled runs — monitored recurring automations.',
-      '✅ Smarter coordination — adds decision logic between tools.',
-      '✅ Custom integrations — we build missing connectors.',
-      '✅ Regular optimization — periodic reliability boosts.',
-      '✅ Future improvements — extend without disruption.'
+      '✅ 3–4 automations — по-стабилно и по-бързо изпълнение.',
+      '✅ Chat or autopilot — заявки в чат и лесно насрочване.',
+      '✅ Connects multiple tools — по-добри връзки между системите.',
+      '✅ Onboarding & training — ролеви инструкции и кратки видеа.',
+      '✅ Ongoing improvements — месечни леки доработки.',
+      '✅ Support — priority отговор при важни теми.',
+      // леки добавки
+      '✅ Smarter coordination — прости правила между екипи/инструменти.',
+      '✅ Regular check-ins — кратък преглед веднъж месечно.'
     ],
     highlight: 'For teams ready to systemize & scale',
     border: 'border-neonPurple'
@@ -40,23 +37,18 @@ const plans = [
     name: 'Scale',
     price: '€9,000 setup + €1,200/month',
     features: [
-      '✅ 4+ automations — advanced, multi-department workflows.',
-      '✅ Chat, events & autonomous — fully hands-free at scale.',
-      '✅ Connects multiple tools — enterprise-grade integrations.',
-      '✅ Onboarding & training — dedicated enablement and rollout.',
-      '✅ Ongoing improvements — proactive roadmap and milestones.',
-      '✅ Support — dedicated specialist.',
-      // включени от Optimize
-      '✅ Scheduled runs — monitored with reporting.',
-      '✅ Smarter coordination — SLAs and cross-team orchestration.',
-      '✅ Custom integrations — legacy and unique systems included.',
-      '✅ Regular optimization — quarterly deep-dives.',
-      '✅ Future improvements — expansion without downtime.',
+      '✅ 4+ automations — по-широко покритие на ключови процеси.',
+      '✅ Chat, events & autonomous — автоматично стартиране където има смисъл.',
+      '✅ Connects multiple tools — интеграции за повече екипи и роли.',
+      '✅ Onboarding & training — работилници за всички звена.',
+      '✅ Ongoing improvements — годишен план за малки, постоянни подобрения.',
+      '✅ Support — dedicated контакт, който познава средата ви.',
+      // наследени от Optimize
+      '✅ Smarter coordination — по-богати правила при нужда.',
+      '✅ Regular check-ins — преглед на всеки два месеца.',
       // само за Scale
-      '✅ Robust coordination & compliance — audit trails and guardrails.',
-      '✅ Proactive monitoring — health checks and incident assistance.',
-      '✅ Built for expansion — higher volumes and new markets.',
-      '✅ Enterprise SLAs — clear responsiveness and uptime targets.'
+      '✅ Built for expansion — готово за повече обем и нови процеси.',
+      '✅ Governance & access — ясни роли и достъпи при растеж.'
     ],
     highlight: 'For growing agencies & enterprises',
     border: 'border-neonBlue'
@@ -83,8 +75,8 @@ export default function OurPlans() {
             <h3 className="text-2xl font-semibold mb-2 text-[#111827]">{plan.name}</h3>
             <p className="font-bold text-xl md:text-2xl mb-4 text-neonBlue">{plan.price}</p>
 
-            <ul className="space-y-2 text-gray-700 mb-4">
-              {plan.features.map((feature, j) => (
+            <ul className="space-y-2 text-gray-800 font-medium text-[1.02rem] md:text-[1.08rem] leading-snug mb-4">
+              {plans[i].features.map((feature, j) => (
                 <li key={j}>{feature}</li>
               ))}
             </ul>
