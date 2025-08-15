@@ -15,31 +15,55 @@ const plans = [
     text: "text-neonPurple",
     features: [
       {
-        title: " 1–2 automations",
-        desc: "Focused workflows that remove repetitive work fast and prove value quickly."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">1–2 automations</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Focused <strong>workflows</strong> that remove repetitive work fast and prove value quickly.
+          </span>
+        )
       },
       {
-        title: " Chat or autopilot",
-        desc: "Type a task when you need it, or let it run on a schedule when you’re busy."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Chat or autopilot</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Type a task when you need it, or let it run on a <strong>schedule</strong> when you’re busy.
+          </span>
+        )
       },
       {
-        title: " Connects multiple tools",
-        desc: "Works with the tools you already use – no vendor lock-in."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Connects multiple tools</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Works with the tools you already use – no <strong>vendor lock-in</strong>.
+          </span>
+        )
       },
       {
-        title: " Onboarding & training",
-        desc: "Clear walkthrough so your team is confident from day one."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Onboarding & training</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Clear walkthrough so your team is confident from day one.
+          </span>
+        )
       },
       {
-        title: " Ongoing improvements",
-        desc: "We refine and extend as your needs evolve."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Ongoing improvements</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            We refine and extend as your needs evolve.
+          </span>
+        )
       },
       {
-        title: " Standard support",
-        desc: "Responsive help during business hours."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Standard support</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Responsive help during business hours.
+          </span>
+        )
       }
     ],
-    note: "Best for: lean teams getting started",
+    note: <span className="text-[0.95rem] font-medium text-gray-700 italic">Best for: lean teams getting started</span>,
     stripeButtonId: "buy_btn_1RnMqjQ3alExjY2yBSlLMmH3"
   },
   {
@@ -49,35 +73,63 @@ const plans = [
     text: "text-neonPurple",
     features: [
       {
-        title: " 3–5 automations",
-        desc: "Multi-process workflows that coordinate across teams and handoffs."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">3–5 automations</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Multi-process <strong>workflows</strong> that coordinate across teams and handoffs.
+          </span>
+        )
       },
       {
-        title: " Chat + scheduled runs",
-        desc: "Simple chat commands plus monitored, recurring automations."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Chat + scheduled runs</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Simple chat commands plus monitored, <strong>recurring automations</strong>.
+          </span>
+        )
       },
       {
-        title: " Smarter coordination",
-        desc: "Links many tools and adds decision logic where needed."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Smarter coordination</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Links many tools and adds <strong>decision logic</strong> where needed.
+          </span>
+        )
       },
       {
-        title: " Custom integrations",
-        desc: "When a required platform isn’t supported out of the box, we can build it."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Custom integrations</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            When a required platform isn’t supported out of the box, we can <strong>build it</strong>.
+          </span>
+        )
       },
       {
-        title: " Priority support",
-        desc: "Fast responses to keep critical operations running."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Priority support</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            <strong>Fast responses</strong> to keep critical operations running.
+          </span>
+        )
       },
       {
-        title: " Regular optimization",
-        desc: "Periodic reviews to boost reliability and performance."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Regular optimization</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Periodic reviews to boost <strong>reliability</strong> and performance.
+          </span>
+        )
       },
       {
-        title: " Future improvements",
-        desc: "Built to expand without disrupting your team."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Future improvements</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Built to expand without disrupting your team.
+          </span>
+        )
       }
     ],
-    note: "For teams ready to systemize & scale",
+    note: <span className="text-[0.95rem] font-medium text-gray-700 italic">For teams ready to systemize & scale</span>,
     stripeButtonId: "buy_btn_1RnMxZQ3alExjY2yeUmTAidG"
   },
   {
@@ -87,35 +139,63 @@ const plans = [
     text: "text-neonPurple",
     features: [
       {
-        title: " 6+ advanced automations",
-        desc: "Complex, cross-department operations with approvals and branching logic."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">6+ advanced automations</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Complex, cross-department operations with approvals and branching logic.
+          </span>
+        )
       },
       {
-        title: " Chat, events, autonomous",
-        desc: "Trigger by chat or events – runs fully hands-free at scale."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Chat, events, autonomous</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Trigger by chat or events – runs fully <strong>hands-free at scale</strong>.
+          </span>
+        )
       },
       {
-        title: " Robust coordination",
-        desc: "Works across many tools, roles, and compliance requirements."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Robust coordination</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Works across many tools, roles, and compliance requirements.
+          </span>
+        )
       },
       {
-        title: " Custom integrations",
-        desc: "Connect unique or legacy platforms specific to your business."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Custom integrations</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Connect unique or legacy platforms specific to your business.
+          </span>
+        )
       },
       {
-        title: " Dedicated support",
-        desc: "A named specialist who knows your setup end-to-end."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Dedicated support</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            A named specialist who knows your setup end-to-end.
+          </span>
+        )
       },
       {
-        title: " Proactive monitoring",
-        desc: "Health checks and quarterly enhancement reviews."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Proactive monitoring</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Health checks and quarterly enhancement reviews.
+          </span>
+        )
       },
       {
-        title: " Built for expansion",
-        desc: "Prepared for higher volumes and future initiatives."
+        title: <span className="text-[1.05rem] md:text-[1.1rem] font-semibold">Built for expansion</span>,
+        desc: (
+          <span className="text-[0.98rem] md:text-[1rem] text-gray-800">
+            Prepared for higher volumes and future initiatives.
+          </span>
+        )
       }
     ],
-    note: "For growing agencies & enterprises",
+    note: <span className="text-[0.95rem] font-medium text-gray-700 italic">For growing agencies & enterprises</span>,
     stripeButtonId: "buy_btn_1RnMytQ3alExjY2ymqk2cAnN"
   }
 ];
@@ -125,7 +205,10 @@ export default function Pricing() {
     <>
       <Head>
         <title>Pricing | OmniNex AI Plans</title>
-        <meta name="description" content="Compare OmniNex pricing plans for custom AI workflow assistants. From lean startup teams to full-scale operations – see which plan fits your business." />
+        <meta
+          name="description"
+          content="Compare OmniNex pricing plans for custom AI workflow assistants. From lean startup teams to full-scale operations – see which plan fits your business."
+        />
       </Head>
 
       <Navbar />
@@ -133,11 +216,19 @@ export default function Pricing() {
       <main className="relative bg-backgroundLight text-accentText min-h-screen py-20 px-6 md:px-20">
         {/* Header */}
         <section className="text-center mb-20">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Choose the plan that fits your team</h1>
-          <p className="text-lg md:text-xl font-semibold text-neonPurple mb-8">
-            Start saving 10+ hours/week with your custom AI assistant. Pick your plan.
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+            <span className="text-neonPurple">Choose the plan </span>
+            <span className="text-black">that fits your team.</span>
+          </h1>
+          <p className="text-lg md:text-xl font-semibold text-gray-800 mb-10">
+            Start saving <strong>10+ hours/week</strong> with your custom AI assistant. <strong>Pick your plan.</strong>
           </p>
-          <NeonButton text="Book a Demo" href="https://calendly.com/nikola-nikolov1/ai-assistant-discovery-call" />
+          <a
+            href="https://calendly.com/nikola-nikolov1/ai-assistant-discovery-call"
+            className="inline-block bg-neonPurple text-black font-semibold text-lg md:text-xl px-10 py-4 rounded-full hover:shadow-[0_0_18px_#c084fc] transition no-underline"
+          >
+            Book a Demo
+          </a>
         </section>
 
         {/* Pricing Cards */}
@@ -154,15 +245,24 @@ export default function Pricing() {
               )}
               <div className="flex flex-col flex-grow">
                 <h2 className="text-2xl font-semibold mb-2 text-primaryText">{plan.name}</h2>
-                <p className={`font-semibold ${plan.text}`}>{plan.price}</p>
+
+                {/* Price - larger + spacing */}
+                <p className={`mt-1 mb-3 ${plan.text} font-bold text-xl md:text-2xl`}>{plan.price}</p>
+
+                {/* ROI + divider + 'Here's what you get' */}
                 <PlanROIText plan={plan.name} />
-                <div className="space-y-4 mb-6 mt-4">
+
+                <div className="space-y-4 mb-6 mt-5">
                   {plan.features.map((f, j) => (
                     <FeatureAccordionLite key={j} title={f.title} description={f.desc} />
                   ))}
                 </div>
-                <p className="text-sm text-secondaryText italic mb-4">{plan.note}</p>
+
+                {/* Note - a bit more visible */}
+                <p className="mb-4">{plan.note}</p>
               </div>
+
+              {/* Buy (kept aligned/unchanged layout-wise) */}
               <div className="mt-auto">
                 <StripeBuyButton buyButtonId={plan.stripeButtonId} />
               </div>
@@ -170,18 +270,20 @@ export default function Pricing() {
           ))}
         </section>
 
-        {/* Bonus tagline */}
-        <section className="text-center mt-12 mb-2">
-          <p className="text-xl md:text-2xl italic text-black">
-            Built for teams who don’t want just another tool – but real results.
+        {/* Bonus tagline (more noticeable + bold key words) */}
+        <section className="text-center mt-14 mb-2">
+          <p className="text-2xl md:text-3xl text-black">
+            Built for teams who don’t want just another tool – but <strong>real results</strong>.
           </p>
         </section>
 
         {/* Footer CTA */}
         <section className="text-center mt-20">
-          <p className="text-lg text-secondaryText mb-6">Still not sure? Let’s build your plan together.</p>
+          <p className="text-lg text-secondaryText mb-6">
+            Still not sure? <span className="font-semibold">Let’s build your plan together.</span>
+          </p>
           <Link href="/#contact" scroll={true}>
-            <span className="inline-block bg-neonPurple text-white font-semibold px-6 py-3 rounded-full hover:shadow-[0_0_10px_#c084fc] transition cursor-pointer">
+            <span className="inline-block bg-neonPurple text-black font-semibold text-lg md:text-xl px-10 py-4 rounded-full hover:shadow-[0_0_18px_#c084fc] transition no-underline cursor-pointer">
               Contact Us
             </span>
           </Link>
