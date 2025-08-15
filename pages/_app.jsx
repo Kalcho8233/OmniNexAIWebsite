@@ -13,9 +13,11 @@ export default function App({ Component, pageProps }) {
         {/* Apple / PWA */}
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#0b0f19" />
 
-        {/* По избор: SEO/UX */}
+        {/* UI color for mobile address bar */}
+        <meta name="theme-color" content="#ffffff" />
+
+        {/* Optional: SEO/UX */}
         <meta name="application-name" content="OmniNex" />
       </Head>
 
