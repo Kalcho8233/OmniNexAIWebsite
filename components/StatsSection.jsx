@@ -1,31 +1,47 @@
+// components/StatsSection.jsx
 import { motion } from 'framer-motion';
 
-const stats = [
-  { value: 'More\n   energy.' }, // добавени 3 spaces за центриране
-  { value: 'More\n    time.' },   // добавени 4 spaces за центриране
-  { value: 'More\n   results.' }  // добавени 3 spaces за центриране
+const items = [
+  { t1: 'More',  t2: 'energy.'  },
+  { t1: 'More',  t2: 'time.'    },
+  { t1: 'More',  t2: 'results.' },
 ];
 
-const Card = ({ value, label, delay = 0 }) => (
-  <motion.div
-    className="bg-white rounded-xl p-8 border border-neonBlue text-black hover:shadow-[0_0_36px_rgba(188,19,254,0.18)] transition-shadow"
-    initial={{ opacity: 0, scale: 0.92 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    transition={{ delay, duration: 0.5 }}
-    viewport={{ once: true }}
-  >
-    <div className="whitespace-pre-line text-neonPurple text-3xl md:text-4xl font-bold mb-2 text-center">
-      {value}
+function NeonCapsule({ t1, t2, delay = 0 }) {
+  return (
+    <div className="relative" style={{ perspective: 1000 }}>
+      <motion.div
+        initial={{ opacity: 0, y: 20, rotateX: 0, rotateY: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        whileHover={{ y: -8, scale: 1.02, rotateX: 4, rotateY: -4 }}
+        transition={{ duration: 0.6, delay }}
+        viewport={{ once: true }}
+        className="relative p-[2px] rounded-3xl bg-[linear-gradient(115deg,#B300FF,#7C3AED,#00E5FF)]"
+      >
+        {/* вътрешност */}
+        <div className="rounded-3xl bg-white px-10 py-14 text-center">
+          <div className="text-neonPurple text-3xl md:text-4xl font-extrabold leading-tight">
+            <span className="block">{t1}</span>
+            <span className="block">{t2}</span>
+          </div>
+        </div>
+
+        {/* мек неонов „glow“ зад капсулата */}
+        <motion.div
+          className="absolute inset-0 rounded-3xl -z-10 blur-2xl opacity-30 bg-[linear-gradient(115deg,#B300FF,#7C3AED,#00E5FF)]"
+          animate={{ opacity: [0.25, 0.4, 0.25] }}
+          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+        />
+      </motion.div>
     </div>
-    <div className="text-gray-900 text-lg md:text-xl">{label}</div>
-  </motion.div>
-);
+  );
+}
 
 export default function StatsSection() {
   return (
-    <section className="py-20 px-6 md:px-12 text-center bg-white rounded-2xl">
+    <section className="py-20 px-6 md:px-12 text-center bg-white">
       <motion.h2
-        className="text-3xl md:text-5xl font-bold text-black mb-10" // по-високо заглавие
+        className="text-3xl md:text-5xl font-bold text-black mb-10"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -35,12 +51,12 @@ export default function StatsSection() {
       </motion.h2>
 
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {stats.map((s, i) => (
-          <Card key={i} {...s} delay={i * 0.05} />
+        {items.map((it, i) => (
+          <NeonCapsule key={i} {...it} delay={i * 0.06} />
         ))}
       </div>
 
-      {/* CTA Button */}
+      {/* CTA – остава твоят по-голям стил */}
       <div className="mt-12">
         <a
           href="/about#results"
