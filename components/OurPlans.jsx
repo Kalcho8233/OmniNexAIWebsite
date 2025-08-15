@@ -66,14 +66,26 @@ export default function OurPlans() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-semibold mb-2 text-[#111827]">{plan.name}</h3>
-            <p className="font-bold text-lg mb-4 text-neonBlue">{plan.price}</p>
+
+            {/* Price bigger */}
+            <p className="font-bold text-xl md:text-2xl mb-4 text-neonBlue">{plan.price}</p>
+
             <ul className="space-y-2 text-gray-700 mb-4">
               {plan.features.map((feature, j) => (
                 <li key={j}>{feature}</li>
               ))}
             </ul>
-            <p className="text-sm text-gray-500 italic mb-4">{plan.highlight}</p>
-            <NeonButton text="Book a Demo" href="https://calendly.com/nikola-nikolov1/ai-assistant-discovery-call" />
+
+            {/* Note a bit more visible */}
+            <p className="text-[0.95rem] text-gray-700 italic mb-4 font-medium">{plan.highlight}</p>
+
+            {/* Button—same large sizing you specified */}
+            <a
+              href="https://calendly.com/nikola-nikolov1/ai-assistant-discovery-call"
+              className="inline-block bg-neonPurple text-black font-semibold text-lg md:text-xl px-10 py-4 rounded-full hover:shadow-[0_0_18px_#c084fc] transition no-underline"
+            >
+              Book a Demo
+            </a>
           </motion.div>
         ))}
       </div>
