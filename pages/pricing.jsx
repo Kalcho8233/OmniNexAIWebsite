@@ -273,7 +273,7 @@ export default function Pricing() {
         {/* Bonus tagline (more noticeable + bold key words) */}
         <section className="text-center mt-14 mb-2">
           <p className="text-2xl md:text-3xl text-black">
-            Built for teams who don’t want just another tool – but <strong>real results</strong>.
+            Built for teams who don’t want just another tool - but <strong>real results</strong>.
           </p>
         </section>
 
