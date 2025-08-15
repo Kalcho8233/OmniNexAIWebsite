@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import NeonButton from './NeonButton';
 
 export default function FinalCTA() {
   return (
@@ -11,7 +10,8 @@ export default function FinalCTA() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Build your <span className="text-black">AI dream team.</span>
+        <span className="text-neonPurple">Build your </span>
+        <span className="text-black">AI dream team.</span>
       </motion.h2>
 
       <motion.p
@@ -21,8 +21,8 @@ export default function FinalCTA() {
         transition={{ delay: 0.2, duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Turn <strong>chaos</strong> into <strong>scale</strong> – AI assistants that 
-        <strong> remember everything</strong>, <strong>work 24/7</strong>, and 
+        Turn <strong>chaos</strong> into <strong>scale</strong> – AI assistants that
+        <strong> remember everything</strong>, <strong>work 24/7</strong>, and
         <strong> never drop the ball</strong>.
       </motion.p>
 
@@ -32,11 +32,12 @@ export default function FinalCTA() {
         transition={{ delay: 0.4, duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <NeonButton
-          text="Get Started"
+        <a
           href="https://calendly.com/nikola-nikolov1/ai-assistant-discovery-call"
-          className="px-10 py-4 text-lg md:text-xl font-semibold"
-        />
+          className="inline-block bg-neonPurple text-black font-semibold text-lg md:text-xl px-10 py-4 rounded-full hover:shadow-[0_0_18px_#c084fc] transition no-underline"
+        >
+          Get Started
+        </a>
       </motion.div>
     </section>
   );
