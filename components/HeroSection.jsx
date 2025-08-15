@@ -30,7 +30,11 @@ export default function HeroSection() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.6, duration: 0.5 }}
       >
-        <NeonButton text="Book a Free Demo" href="#demo" />
+        <NeonButton 
+          text="Book a Free Demo" 
+          href="#demo"
+          className="px-10 py-4 text-lg md:text-xl font-semibold" // същият размер като бутона в StatsSection
+        />
       </motion.div>
     </section>
   );
