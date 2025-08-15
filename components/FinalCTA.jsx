@@ -21,7 +21,7 @@ export default function FinalCTA() {
         transition={{ delay: 0.2, duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Turn <strong>chaos</strong> into <strong>scale</strong> – AI assistants that
+        Turn <strong>chaos</strong> into <strong>scale</strong> - AI assistants that
         <strong> remember everything</strong>, <strong>work 24/7</strong>, and
         <strong> never drop the ball</strong>.
       </motion.p>
