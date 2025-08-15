@@ -93,7 +93,7 @@ export default function Pricing() {
             <span className="text-black">that fits your team.</span>
           </h1>
           <p className="text-lg md:text-xl font-semibold text-gray-800 mb-10">
-            Start saving <strong>10+ hours/week</strong> with your custom AI assistant. <strong>Pick your plan.</strong>
+            Start saving <strong>10+ hours/week</strong> with your custom AI assistant. 
           </p>
           <a
             href="https://calendly.com/nikola-nikolov1/ai-assistant-discovery-call"
