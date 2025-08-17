@@ -26,3 +26,20 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+// pages/_app.jsx
+import '@n8n/chat/dist/style.css';
+import '../styles/globals.css'; // ако го имаш
+import N8nChat from '../components/N8nChat';
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Component {...pageProps} />
+      {/* Чатът се инжектира като floating widget */}
+      <N8nChat />
+    </>
+  );
+}
+
+export default MyApp;
