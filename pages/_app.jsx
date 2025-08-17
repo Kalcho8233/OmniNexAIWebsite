@@ -1,6 +1,8 @@
 // pages/_app.jsx
 import Head from "next/head";
 import "../styles/globals.css";
+import "@n8n/chat/dist/style.css";   // 👉 добавяме стила на чата
+import N8nChat from "../components/N8nChat"; // 👉 импортваме компонента
 
 export default function App({ Component, pageProps }) {
   return (
@@ -22,24 +24,11 @@ export default function App({ Component, pageProps }) {
         <meta name="application-name" content="OmniNex" />
         <meta name="description" content="OmniNex — AI automation for clarity, speed, and growth." />
       </Head>
+      
       <Component {...pageProps} />
-    </>
-  );
-}
 
-// pages/_app.jsx
-import '@n8n/chat/dist/style.css';
-import '../styles/globals.css'; // ако го имаш
-import N8nChat from '../components/N8nChat';
-
-function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Component {...pageProps} />
-      {/* Чатът се инжектира като floating widget */}
+      {/* 👉 Чатът ще се инжектира най-отдолу на всяка страница */}
       <N8nChat />
     </>
   );
 }
-
-export default MyApp;
