@@ -1,36 +1,44 @@
-@'
 "use client";
 import { useEffect } from "react";
 
 /**
- * Lightweight n8n chat widget mounting.
- * Adds chatId + target so the input box appears and binds to the page.
+ * Lightweight n8n chat widget via CDN.
+ * Работи изцяло client-side (без SSR конфликти) и показва input полето.
  */
 export default function N8nChat() {
   useEffect(() => {
-    let cleanup;
+    // 1) Зареждаме CSS (само веднъж)
+    const cssId = "n8n-chat-css";
+    if (!document.getElementById(cssId)) {
+      const link = document.createElement("link");
+      link.id = cssId;
+      link.rel = "stylesheet";
+      link.href = "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css";
+      document.head.appendChild(link);
+    }
 
-    (async () => {
-      const { createChat } = await import("@n8n/chat");
+    // 2) Зареждаме chat bundle и инициализираме виджета
+    const script = document.createElement("script");
+    script.type = "module";
+    script.innerHTML = `
+      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-      cleanup = createChat({
-        // ✅ СМЕНИ с твоя реален публичен чат webhook URL от n8n
-        webhookUrl: "https://n8n.srv925690.hstgr.cloud/webhook/62f64574-348c-4cdd-b048-201056022ef8/chat",
-
-        // важно e да има chatId (уникално име за твоя сайт)
-        chatId: "omninex-chat",
-
-        // къде да се закачи widget-ът (в края на body)
+      createChat({
+        webhookUrl: 'https://n8n.srv925690.hstgr.cloud/webhook/62f64574-348c-4cdd-b048-201056022ef8/chat',
+        chatId: 'omninex-chat',
         target: document.body,
+        defaultOpen: false,
+        position: 'bottom-right',
+        zIndex: 2147483000
       });
-    })();
+    `;
+    document.body.appendChild(script);
 
-    // опит за чисто отделяне при unmount
+    // Cleanup при unmount
     return () => {
-      try { typeof cleanup === "function" && cleanup(); } catch {}
+      try { document.body.removeChild(script); } catch {}
     };
   }, []);
 
   return null;
 }
-'@ | Set-Content -Encoding UTF8 components\N8nChat.jsx
