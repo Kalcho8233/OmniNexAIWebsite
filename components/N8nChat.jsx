@@ -1,36 +1,44 @@
-@'
+// components/N8nChat.jsx
 "use client";
 import { useEffect } from "react";
 
-/**
- * Lightweight n8n chat widget mounting.
- * Adds chatId + target so the input box appears and binds to the page.
- */
 export default function N8nChat() {
   useEffect(() => {
-    let cleanup;
+    // 1) инжектираме CSS (ако не е вече инжектиран)
+    const cssId = "n8n-chat-css";
+    if (!document.getElementById(cssId)) {
+      const link = document.createElement("link");
+      link.id = cssId;
+      link.rel = "stylesheet";
+      link.href = "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css";
+      document.head.appendChild(link);
+    }
 
-    (async () => {
-      const { createChat } = await import("@n8n/chat");
+    // 2) зареждаме bundle script и стартираме createChat
+    const script = document.createElement("script");
+    script.type = "module";
+    script.innerHTML = `
+      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-      cleanup = createChat({
-        // ✅ СМЕНИ с твоя реален публичен чат webhook URL от n8n
-        webhookUrl: "https://n8n.srv925690.hstgr.cloud/webhook/62f64574-348c-4cdd-b048-201056022ef8/chat",
-
-        // важно e да има chatId (уникално име за твоя сайт)
-        chatId: "omninex-chat",
-
-        // къде да се закачи widget-ът (в края на body)
-        target: document.body,
+      // 👉 ЗАДЪЛЖИТЕЛНО смени webhookUrl с твоя ПРОДАКШЪН webhook от n8n (Chat Trigger)
+      const chat = createChat({
+        webhookUrl: 'https://n8n.srv925690.hstgr.cloud/webhook/62f64574-348c-4cdd-b048-201056022ef8/chat',
+        chatId: 'omninex-chat',
+        target: document.body,           // фиксиран бадж в страницата
+        defaultOpen: false,              // кликаш баджа и се отваря
+        // UI "сейфти" – високи слоеве, ако нещо го покрива
+        zIndex: 2147483000,
+        position: 'bottom-right',
       });
-    })();
+    `;
+    document.body.appendChild(script);
 
-    // опит за чисто отделяне при unmount
     return () => {
-      try { typeof cleanup === "function" && cleanup(); } catch {}
+      try {
+        document.body.removeChild(script);
+      } catch {}
     };
   }, []);
 
   return null;
 }
-'@ | Set-Content -Encoding UTF8 components\N8nChat.jsx
