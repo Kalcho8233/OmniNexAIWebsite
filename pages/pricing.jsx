@@ -6,6 +6,7 @@ import NeonButton from "../components/NeonButton";
 import FeatureAccordionLite from "../components/FeatureAccordionLite";
 import PlanROIText from "../components/PlanROIText";
 import StripeBuyButton from "../components/StripeBuyButton";
+import Footer from "../components/Footer"; // ✅ добавено
 
 const descCls = "text-[1.02rem] md:text-[1.08rem] font-medium text-gray-800 leading-snug";
 
@@ -161,6 +162,9 @@ export default function Pricing() {
           </Link>
         </section>
       </main>
+
+      {/* ✅ Added Footer */}
+      <Footer /> 
     </>
   );
 }
