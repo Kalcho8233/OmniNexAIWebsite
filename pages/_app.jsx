@@ -1,6 +1,6 @@
+// pages/_app.jsx
 import Head from "next/head";
 import "../styles/globals.css";
-import N8nChat from "../components/N8nChat";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -22,12 +22,7 @@ export default function App({ Component, pageProps }) {
         <meta name="application-name" content="OmniNex" />
         <meta name="description" content="OmniNex — AI automation for clarity, speed, and growth." />
       </Head>
-
-      {/* Page content */}
       <Component {...pageProps} />
-
-      {/* n8n Chat widget */}
-      <N8nChat />
     </>
   );
 }
